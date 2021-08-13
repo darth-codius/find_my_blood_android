@@ -149,6 +149,7 @@
         android:text="Register"
         android:textColor="#0D6597"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvAccount"
         app:layout_constraintTop_toTopOf="@+id/tvAccount" />
