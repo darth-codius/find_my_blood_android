@@ -1,5 +1,7 @@
 package live.adabe.findmyblood.models
 
+import androidx.room.Entity
+
 data class Hospital(
     val name: String,
     val email: String,
