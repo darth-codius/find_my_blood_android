@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_blood_donation"
-    tools:context=".ui.fragments.LoginFragment">
+    tools:context=".ui.fragments.SignUpFragment">
 
     <ImageView
         android:id="@+id/bigBlood"
@@ -52,7 +52,9 @@
         android:layout_marginEnd="24dp"
         android:hint="Name Of Hospital"
         app:boxStrokeColor="#ED394A"
+        app:layout_constraintBottom_toTopOf="@+id/emailid_Input"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignup_to_get_started"
         tools:ignore="MissingConstraints">
@@ -70,7 +72,9 @@
         android:layout_marginTop="20dp"
         android:hint="Email Addrsss"
         app:boxStrokeColor="#ED394A"
+        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
         app:layout_constraintEnd_toEndOf="@+id/inputHospital"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/inputHospital"
         app:layout_constraintTop_toBottomOf="@+id/inputHospital"
         tools:ignore="MissingConstraints">
@@ -87,9 +91,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
+        app:layout_constraintBottom_toTopOf="@+id/confirmpasswordinput"
         app:layout_constraintEnd_toEndOf="@+id/emailid_Input"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/emailid_Input"
@@ -108,9 +113,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="confirm Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/inputPassword"
@@ -133,6 +139,7 @@
         android:backgroundTint="#ED394A"
         android:text="REGISTER"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvAccount"
         app:layout_constraintEnd_toEndOf="@+id/confirmpasswordinput"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/confirmpasswordinput"
@@ -143,8 +150,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="48dp"
         android:text="Already Have An Account?"
         android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="@+id/btnRegister"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
@@ -152,15 +163,15 @@
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="8dp"
         android:text="Login"
-        android:textStyle="bold"
         android:textColor="#0D6597"
         android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAccount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvAccount"
-        app:layout_constraintTop_toTopOf="@+id/tvAccount" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
