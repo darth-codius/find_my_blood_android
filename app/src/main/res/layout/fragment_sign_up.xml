@@ -43,7 +43,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputHospital"
+        android:id="@+id/input_Hospital"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:layout_marginEnd="24dp"
         android:hint="Name Of Hospital"
         app:boxStrokeColor="#ED394A"
-        app:layout_constraintBottom_toTopOf="@+id/emailid_Input"
+        app:layout_constraintBottom_toTopOf="@+id/email_id_Input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,18 +65,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailid_Input"
+        android:id="@+id/email_id_Input"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Email Addrsss"
         app:boxStrokeColor="#ED394A"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-        app:layout_constraintEnd_toEndOf="@+id/inputHospital"
+        app:layout_constraintBottom_toTopOf="@+id/input_Password"
+        app:layout_constraintEnd_toEndOf="@+id/input_Hospital"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/inputHospital"
-        app:layout_constraintTop_toBottomOf="@+id/inputHospital"
+        app:layout_constraintStart_toStartOf="@+id/input_Hospital"
+        app:layout_constraintTop_toBottomOf="@+id/input_Hospital"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -86,7 +86,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputPassword"
+        android:id="@+id/input_Password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -94,11 +94,11 @@
         android:hint="Password"
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
-        app:layout_constraintBottom_toTopOf="@+id/confirmpasswordinput"
-        app:layout_constraintEnd_toEndOf="@+id/emailid_Input"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_password_input"
+        app:layout_constraintEnd_toEndOf="@+id/email_id_Input"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/emailid_Input"
-        app:layout_constraintTop_toBottomOf="@+id/emailid_Input"
+        app:layout_constraintStart_toStartOf="@+id/email_id_Input"
+        app:layout_constraintTop_toBottomOf="@+id/email_id_Input"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -108,7 +108,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmpasswordinput"
+        android:id="@+id/confirm_password_input"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -117,10 +117,10 @@
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
         app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/input_Password"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/input_Password"
+        app:layout_constraintTop_toBottomOf="@+id/input_Password"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -140,10 +140,10 @@
         android:text="REGISTER"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tvAccount"
-        app:layout_constraintEnd_toEndOf="@+id/confirmpasswordinput"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_password_input"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/confirmpasswordinput"
-        app:layout_constraintTop_toBottomOf="@+id/confirmpasswordinput" />
+        app:layout_constraintStart_toStartOf="@+id/confirm_password_input"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_input" />
 
     <TextView
         android:id="@+id/tvAccount"
