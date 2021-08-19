@@ -72,7 +72,7 @@
         android:layout_marginTop="20dp"
         android:hint="Email Addrsss"
         app:boxStrokeColor="#ED394A"
-        app:layout_constraintBottom_toTopOf="@+id/input_Password"
+        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
         app:layout_constraintEnd_toEndOf="@+id/input_Hospital"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/input_Hospital"
@@ -86,7 +86,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_Password"
+        android:id="@+id/inputPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -117,10 +117,10 @@
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
         app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-        app:layout_constraintEnd_toEndOf="@+id/input_Password"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/input_Password"
-        app:layout_constraintTop_toBottomOf="@+id/input_Password"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
