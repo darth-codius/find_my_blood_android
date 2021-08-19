@@ -45,11 +45,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_Hospital"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="30dp"
         android:hint="Name Of Hospital"
         app:boxStrokeColor="#ED394A"
         app:layout_constraintBottom_toTopOf="@+id/email_id_Input"
@@ -131,10 +131,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegister"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ED394A"
         android:text="REGISTER"
