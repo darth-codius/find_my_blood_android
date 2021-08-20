@@ -43,13 +43,13 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_Hospital"
+        android:id="@+id/inputHospital"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="30dp"
         android:hint="Name Of Hospital"
         app:boxStrokeColor="#ED394A"
         app:layout_constraintBottom_toTopOf="@+id/email_id_Input"
@@ -72,11 +72,11 @@
         android:layout_marginTop="20dp"
         android:hint="Email Addrsss"
         app:boxStrokeColor="#ED394A"
-        app:layout_constraintBottom_toTopOf="@+id/input_Password"
-        app:layout_constraintEnd_toEndOf="@+id/input_Hospital"
+        app:layout_constraintBottom_toTopOf="@+id/passwordInput"
+        app:layout_constraintEnd_toEndOf="@+id/inputHospital"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/input_Hospital"
-        app:layout_constraintTop_toBottomOf="@+id/input_Hospital"
+        app:layout_constraintStart_toStartOf="@+id/inputHospital"
+        app:layout_constraintTop_toBottomOf="@+id/inputHospital"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -86,7 +86,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_Password"
+        android:id="@+id/passwordInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
-        app:layout_constraintBottom_toTopOf="@+id/confirm_password_input"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPasswordInput"
         app:layout_constraintEnd_toEndOf="@+id/email_id_Input"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/email_id_Input"
@@ -108,7 +108,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirm_password_input"
+        android:id="@+id/confirmPasswordInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -117,10 +117,10 @@
         android:inputType="textPassword"
         app:boxStrokeColor="#ED394A"
         app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-        app:layout_constraintEnd_toEndOf="@+id/input_Password"
+        app:layout_constraintEnd_toEndOf="@+id/passwordInput"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/input_Password"
-        app:layout_constraintTop_toBottomOf="@+id/input_Password"
+        app:layout_constraintStart_toStartOf="@+id/passwordInput"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -131,19 +131,20 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegister"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ED394A"
         android:text="REGISTER"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tvAccount"
-        app:layout_constraintEnd_toEndOf="@+id/confirm_password_input"
+        app:layout_constraintEnd_toEndOf="@+id/confirmPasswordInput"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/confirm_password_input"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password_input" />
+        app:layout_constraintStart_toStartOf="@+id/confirmPasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordInput" />
 
     <TextView
         android:id="@+id/tvAccount"
@@ -160,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
     <TextView
-        android:id="@+id/tvRegister"
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

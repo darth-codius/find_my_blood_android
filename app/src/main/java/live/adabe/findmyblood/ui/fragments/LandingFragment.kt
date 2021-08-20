@@ -19,8 +19,17 @@ class LandingFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentLandingBinding.inflate(inflater, container, false)
-        binding.loginButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_landingFragment_to_loginFragment)
+
+        binding.apply {
+            registerButton.setOnClickListener {
+                Navigation.findNavController(it)
+                    .navigate(R.id.action_landingFragment_to_signUpFragment)
+            }
+
+            loginButton.setOnClickListener {
+                Navigation.findNavController(it)
+                    .navigate(R.id.action_landingFragment_to_loginFragment)
+            }
         }
         return binding.root
     }
