@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:src="@drawable/ic_blood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/getBlood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET BLOOD"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="Welcome,"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/getBlood"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/getBlood"
+        app:layout_constraintTop_toBottomOf="@+id/getBlood"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/tsWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="Okwe General Hospital, Asaba"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <ImageView
+        android:id="@+id/ic_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dashboard_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toEndOf="@+id/tsWelcome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.319" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Blood Save Live"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424" />
+
+    <TableLayout
+        android:id="@+id/simpleTableLayout"
+        android:layout_width="80dp""
+"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <TableRow
+
+        android:id="@+id/firstRow"
+        android:layout_width="340dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565">
+
+        <!-- first element of the row-->
+        <TextView
+
+            android:id="@+id/simpleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#b0b0b0"
+            android:padding="18dip"
+            android:text="Text 1"
+            android:textColor="#000"
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:id="@+id/simpleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF0000"
+            android:padding="18dip"
+            android:text="Text 2"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+    </TableRow>
+</TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
