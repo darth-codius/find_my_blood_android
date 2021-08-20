@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import live.adabe.findmyblood.models.network.LoginRequest
 import live.adabe.findmyblood.models.network.SignUpRequest
@@ -16,13 +17,13 @@ class AuthViewModel(@SuppressLint("StaticFieldLeak") private val activity: Activ
     private var authRepository: AuthRepository = AuthRepository(preferences)
 
     fun loginHospital(loginRequest: LoginRequest) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             authRepository.loginHospital(loginRequest)
         }
     }
 
     fun signUpHospital(signUpRequest: SignUpRequest) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             authRepository.signUpHospital(signUpRequest)
         }
     }

@@ -165,6 +165,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
         android:text="Login"
         android:textColor="#0D6597"
         android:textSize="15sp"

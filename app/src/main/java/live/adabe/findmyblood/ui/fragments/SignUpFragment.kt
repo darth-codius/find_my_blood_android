@@ -12,11 +12,13 @@ import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentSignUpBinding
 import live.adabe.findmyblood.models.network.SignUpRequest
 import live.adabe.findmyblood.viewmodels.AuthViewModel
+import live.adabe.findmyblood.viewmodels.ViewModelFactory
 
 class SignUpFragment : Fragment() {
 
     private lateinit var binding: FragmentSignUpBinding
     private lateinit var viewModel: AuthViewModel
+    private lateinit var factory: ViewModelFactory
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,8 +26,8 @@ class SignUpFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSignUpBinding.inflate(inflater, container, false)
-
-        //viewModel = ViewModelProvider(this)[AuthViewModel::class.java]
+        factory = ViewModelFactory(requireActivity())
+        viewModel = ViewModelProvider(requireActivity(), factory)[AuthViewModel::class.java]
 
         binding.apply {
 
@@ -52,7 +54,7 @@ class SignUpFragment : Fragment() {
             if (inputCheck(nameOfHospital, email, password, confirmPassword)) {
                 val signUpRequest = SignUpRequest(nameOfHospital, email, password, confirmPassword)
 
-                //viewModel.signUpHospital(signUpRequest)
+                viewModel.signUpHospital(signUpRequest)
             } else {
                 Toast.makeText(requireActivity(), "Please fill out all fields", Toast.LENGTH_LONG)
                     .show()
