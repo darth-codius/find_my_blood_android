@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentSignUpBinding
 import live.adabe.findmyblood.models.network.SignUpRequest
@@ -41,6 +42,15 @@ class SignUpFragment : Fragment() {
             }
         }
 
+        viewModel.isSignUpSuccessful.observe(viewLifecycleOwner, { isSuccessful ->
+            if (isSuccessful) {
+                findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+            } else {
+                makeToast("Sign up Failed! \nPlease try again")
+            }
+
+        })
+
         return binding.root
     }
 
@@ -56,10 +66,14 @@ class SignUpFragment : Fragment() {
 
                 viewModel.signUpHospital(signUpRequest)
             } else {
-                Toast.makeText(requireActivity(), "Please fill out all fields", Toast.LENGTH_LONG)
-                    .show()
+                makeToast("Please fill out all fields")
             }
         }
+    }
+
+    private fun makeToast(message: String) {
+        Toast.makeText(requireActivity(), message, Toast.LENGTH_LONG)
+            .show()
     }
 
     private fun inputCheck(

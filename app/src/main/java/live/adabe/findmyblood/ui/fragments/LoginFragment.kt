@@ -1,6 +1,7 @@
 package live.adabe.findmyblood.ui.fragments
 
 import android.os.Bundle
+import android.os.Message
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentLoginBinding
 import live.adabe.findmyblood.models.network.LoginRequest
@@ -41,6 +43,14 @@ class LoginFragment : Fragment() {
             }
         }
 
+        viewModel.isLoginSuccessful.observe(viewLifecycleOwner, { isSuccessful ->
+            if (isSuccessful) {
+
+            } else {
+                makeToast("Login failed! \nPlease try again")
+            }
+        })
+
         return binding.root
     }
 
@@ -54,10 +64,14 @@ class LoginFragment : Fragment() {
 
                 viewModel.loginHospital(loginRequest)
             } else {
-                Toast.makeText(requireActivity(), "Please fill out all fields", Toast.LENGTH_LONG)
-                    .show()
+                makeToast("Please fill out all fields")
             }
         }
+    }
+
+    private fun makeToast(message: String) {
+        Toast.makeText(requireActivity(), message, Toast.LENGTH_LONG)
+            .show()
     }
 
     private fun inputCheck(
