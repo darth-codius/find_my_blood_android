@@ -31,7 +31,6 @@ class SignUpFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity(), factory)[AuthViewModel::class.java]
 
         binding.apply {
-
             btnRegister.setOnClickListener {
                 addNewHospital()
             }
@@ -42,18 +41,21 @@ class SignUpFragment : Fragment() {
             }
         }
 
+        /*Observes liveData and
+           checks if signUp is successful and navigates to login page
+         */
         viewModel.isSignUpSuccessful.observe(viewLifecycleOwner, { isSuccessful ->
             if (isSuccessful) {
                 findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
             } else {
                 makeToast("Sign up Failed! \nPlease try again")
             }
-
         })
 
         return binding.root
     }
 
+    //Function for adding new hospital
     private fun addNewHospital() {
         binding.apply {
             val nameOfHospital = textInputHospital.editText?.text.toString()
@@ -61,9 +63,11 @@ class SignUpFragment : Fragment() {
             val password = textInputPassword.editText?.text.toString()
             val confirmPassword = textInputConfirmPassword.editText?.text.toString()
 
+            //InputCheck function called to check if the textFields are empty
             if (inputCheck(nameOfHospital, email, password, confirmPassword)) {
                 val signUpRequest = SignUpRequest(nameOfHospital, email, password, confirmPassword)
 
+                //Adds new hospital
                 viewModel.signUpHospital(signUpRequest)
             } else {
                 makeToast("Please fill out all fields")
@@ -71,11 +75,13 @@ class SignUpFragment : Fragment() {
         }
     }
 
+    //Function for making toast message
     private fun makeToast(message: String) {
         Toast.makeText(requireActivity(), message, Toast.LENGTH_LONG)
             .show()
     }
 
+    //This function checks if the textFields are empty
     private fun inputCheck(
         nameOfHospital: String,
         email: String,
