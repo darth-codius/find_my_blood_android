@@ -22,6 +22,15 @@ class Preferences(private val activity: Activity) {
         }
     }
 
+    fun setIsLoggedIn(isLoggedIn: Boolean) {
+        with(sharedPref.edit()) {
+            putBoolean("logged_in", isLoggedIn)
+            apply()
+        }
+    }
+
+    fun getIsLoggedIn() = sharedPref.getBoolean("logged_in", false)
+
     fun getId() = sharedPref.getString("id", null)
     fun getToken() = sharedPref.getString("token", null)
 }
