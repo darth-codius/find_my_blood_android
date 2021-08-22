@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:src="@drawable/ic_blood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/getBlood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET BLOOD"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="Welcome,"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/getBlood"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/getBlood"
+        app:layout_constraintTop_toBottomOf="@+id/getBlood"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/tsWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="32dp"
+        android:text="Okwe General Hospital, Asaba"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <ImageView
+        android:id="@+id/ic_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_dashboard_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toEndOf="@+id/tsWelcome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bankcapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Bank Capacity"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/firstRow"
+        android:layout_width="340dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691">
+
+        <TextView
+
+            android:id="@+id/units30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ED394A"
+            android:padding="18dip"
+            android:text="30 Units"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/unit15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="#ED394A"
+            android:padding="18dip"
+            android:text="15 Units"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/units30"
+            app:layout_constraintStart_toEndOf="@+id/units30" />
+
+        <TextView
+
+            android:id="@+id/units40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ED394A"
+            android:padding="18dip"
+            android:text="40 Units"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/unit15"
+            app:layout_constraintStart_toEndOf="@+id/unit15" />
+
+        <TextView
+
+            android:id="@+id/units70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ED394A"
+            android:padding="18dip"
+            android:text="70 Units"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/units40"
+            app:layout_constraintStart_toEndOf="@+id/units40" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnmakerequest"
+        android:layout_width="333dp"
+        android:layout_height="57dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ED394A"
+        android:text="Make a Request"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <TextView
+
+        android:id="@+id/units70s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ED394A"
+        android:padding="18dip"
+        android:text="70 Units"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/units40s"
+        app:layout_constraintStart_toEndOf="@+id/units40s" />
+
+    <TextView
+
+        android:id="@+id/units40s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ED394A"
+        android:padding="18dip"
+        android:text="40 Units"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/unit15s"
+        app:layout_constraintEnd_toStartOf="@+id/units70s"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/unit15s" />
+
+    <TextView
+
+        android:id="@+id/unit15s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ED394A"
+        android:padding="18dip"
+        android:text="15 Units"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/units30s"
+        app:layout_constraintEnd_toStartOf="@+id/units40s"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/units30s" />
+
+    <TextView
+
+        android:id="@+id/units30s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="#ED394A"
+        android:padding="18dip"
+        android:text="30 Units"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/unit15s"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/firstRow"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="346dp"
+        android:layout_height="145dp"
+        android:src="@drawable/ic_group_823"
+        app:layout_constraintBottom_toTopOf="@+id/bankcapacity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tsWelcome"
+        app:layout_constraintVertical_bias="0.527" />
+
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A+"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/units30s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A-"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/units30s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B+"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/units30s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B-"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/units30s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
