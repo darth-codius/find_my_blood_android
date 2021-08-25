@@ -5,57 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_blood_donation_relaxed"
+    android:padding="10dp"
     tools:context=".ui.fragments.SignUpFragment">
 
     <ImageView
         android:id="@+id/bigBlood"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/ic_blood"
-        app:layout_constraintEnd_toEndOf="@+id/getBlood"
-        app:layout_constraintStart_toStartOf="@+id/getBlood"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/getBlood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="GET BLOOD"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bigBlood" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSignup_to_get_started"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:text="Sign up to Get Started"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/getBlood"
-        app:layout_constraintTop_toBottomOf="@+id/getBlood" />
+        app:layout_constraintStart_toStartOf="@+id/bigBlood"
+        app:layout_constraintTop_toBottomOf="@+id/bigBlood" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputHospital"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
         android:hint="Name Of Hospital"
         app:boxStrokeColor="#ED394A"
         app:layout_constraintBottom_toTopOf="@+id/textInputEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvSignup_to_get_started"
         app:layout_constraintTop_toBottomOf="@+id/tvSignup_to_get_started"
         tools:ignore="MissingConstraints">
 
@@ -82,7 +68,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -132,11 +118,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ED394A"
         android:text="REGISTER"
@@ -176,6 +160,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvAccount" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

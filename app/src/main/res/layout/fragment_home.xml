@@ -4,169 +4,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".ui.fragments.HomeFragment">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="83dp"
-        android:layout_height="83dp"
-        android:src="@drawable/ic_blood"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
-
-    <TextView
-        android:id="@+id/getBlood"
+        android:id="@+id/homeBloodLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GET BLOOD"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.864"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:text="Welcome,"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/getBlood"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="@+id/getBlood"
-        app:layout_constraintTop_toBottomOf="@+id/getBlood"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintStart_toStartOf="@+id/homeBloodLogo"
+        app:layout_constraintTop_toBottomOf="@+id/homeBloodLogo" />
 
     <TextView
-        android:id="@+id/tsWelcome"
+        android:id="@+id/homeHospitalName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="32dp"
         android:text="Okwe General Hospital, Asaba"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintStart_toStartOf="@+id/tvWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
     <ImageView
-        android:id="@+id/ic_donation"
+        android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="10dp"
         android:src="@drawable/ic_dashboard_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.657"
-        app:layout_constraintStart_toEndOf="@+id/tsWelcome"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintTop_toTopOf="@+id/tvWelcome" />
 
     <TextView
         android:id="@+id/bankcapacity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:text="Bank Capacity"
-        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:id="@+id/firstRow"
-        android:layout_width="340dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#F37B86"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691">
+        app:layout_constraintStart_toStartOf="@+id/bankcapacity"
+        app:layout_constraintTop_toBottomOf="@+id/bankcapacity">
 
         <TextView
-
-            android:id="@+id/units30"
+            android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ED394A"
-            android:padding="18dip"
             android:text="30 Units"
-            android:textColor="#fff"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.26020408" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 Units"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline15"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.74" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40 Units"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline16"
+            app:layout_constraintStart_toStartOf="@+id/guideline15"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-
-            android:id="@+id/unit15"
+            android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:background="#ED394A"
-            android:padding="18dip"
-            android:text="15 Units"
-            android:textColor="#fff"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toBottomOf="@+id/units30"
-            app:layout_constraintStart_toEndOf="@+id/units30" />
-
-        <TextView
-
-            android:id="@+id/units40"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ED394A"
-            android:padding="18dip"
-            android:text="40 Units"
-            android:textColor="#fff"
-            android:textSize="12dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/unit15"
-            app:layout_constraintStart_toEndOf="@+id/unit15" />
-
-        <TextView
-
-            android:id="@+id/units70"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ED394A"
-            android:padding="18dip"
             android:text="70 Units"
-            android:textColor="#fff"
-            android:textSize="12dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/units40"
-            app:layout_constraintStart_toEndOf="@+id/units40" />
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline16"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnmakerequest"
-        android:layout_width="333dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="#ED394A"
         android:text="Make a Request"
@@ -174,150 +152,187 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstRow"
-        app:layout_constraintVertical_bias="0.934" />
-
-    <TextView
-
-        android:id="@+id/units70s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ED394A"
-        android:padding="18dip"
-        android:text="70 Units"
-        android:textColor="#fff"
-        android:textSize="12dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/units40s"
-        app:layout_constraintStart_toEndOf="@+id/units40s" />
-
-    <TextView
-
-        android:id="@+id/units40s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ED394A"
-        android:padding="18dip"
-        android:text="40 Units"
-        android:textColor="#fff"
-        android:textSize="12dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/unit15s"
-        app:layout_constraintEnd_toStartOf="@+id/units70s"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/unit15s" />
-
-    <TextView
-
-        android:id="@+id/unit15s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ED394A"
-        android:padding="18dip"
-        android:text="15 Units"
-        android:textColor="#fff"
-        android:textSize="12dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/units30s"
-        app:layout_constraintEnd_toStartOf="@+id/units40s"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/units30s" />
-
-    <TextView
-
-        android:id="@+id/units30s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:background="#ED394A"
-        android:padding="18dip"
-        android:text="30 Units"
-        android:textColor="#fff"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/unit15s"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/firstRow"
-        app:layout_constraintTop_toBottomOf="@+id/firstRow" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="346dp"
-        android:layout_height="145dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_group_823"
-        app:layout_constraintBottom_toTopOf="@+id/bankcapacity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tsWelcome"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintStart_toStartOf="@+id/homeHospitalName"
+        app:layout_constraintTop_toBottomOf="@+id/homeHospitalName" />
 
     <TextView
         android:id="@+id/a1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
         android:text="A+"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/units30s"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstRow"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintTop_toBottomOf="@+id/firstRow" />
 
     <TextView
         android:id="@+id/a2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:text="A-"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/units30s"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstRow"
-        app:layout_constraintVertical_bias="0.428" />
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/a1"
+        app:layout_constraintStart_toEndOf="@+id/a1" />
 
     <TextView
         android:id="@+id/b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
         android:text="B+"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/units30s"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.618"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstRow"
-        app:layout_constraintVertical_bias="0.428" />
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/a2"
+        app:layout_constraintEnd_toStartOf="@+id/b2" />
 
     <TextView
         android:id="@+id/b2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         android:text="B-"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/units30s"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/b1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#F37B86"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="@+id/firstRow"
+        app:layout_constraintTop_toBottomOf="@+id/a1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="55 Units"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.73214287" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="67 Units"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintStart_toStartOf="@+id/guideline17"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Units"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline20"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 Units"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline20"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="AB+"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstRow"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintTop_toBottomOf="@+id/secondRow" />
 
-    <androidx.constraintlayout.widget.Barrier
+    <TextView
+        android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="107dp" />
+        android:layout_marginStart="70dp"
+        android:text="AB-"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView25"
+        app:layout_constraintStart_toEndOf="@+id/textView25" />
 
-    <androidx.constraintlayout.widget.Barrier
+    <TextView
+        android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_marginEnd="70dp"
+        android:text="O+"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView26"
+        app:layout_constraintEnd_toStartOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="O-"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView27"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

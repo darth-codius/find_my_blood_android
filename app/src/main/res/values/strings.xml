@@ -2,4 +2,5 @@
     <string name="app_name">Find My Blood</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blood_group">Blood Group</string>
 </resources>

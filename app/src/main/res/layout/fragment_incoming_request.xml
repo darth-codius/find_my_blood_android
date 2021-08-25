@@ -2,81 +2,66 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".ui.fragments.SentRequestFragment">
+    tools:context=".ui.fragments.IncomingRequestFragment">
 
     <ImageView
-        android:id="@+id/bloodLogo"
+        android:id="@+id/incomingRequestBloodLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:contentDescription="image"
         android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imageHolder"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:cardCornerRadius="250dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloodLogo">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/image_circle"
-            tools:src="@tools:sample/avatars" />
-
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toBottomOf="@+id/incomingRequestBloodLogo"
+        tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/dashboardHospitalName"
+        android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Okwe General Hospital, Asaba"
-        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageHolder"
-        app:layout_constraintStart_toStartOf="@+id/imageHolder"
-        app:layout_constraintTop_toBottomOf="@+id/imageHolder"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
     <TextView
-        android:id="@+id/dashboardSentRequest"
+        android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Sent Request"
+        android:text="Incoming Request"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboardHospitalName" />
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/sentRequestConstraint"
+        android:id="@+id/incomingRequestConstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F9BDC3"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/dashboardSentRequest"
-        app:layout_constraintTop_toBottomOf="@+id/dashboardSentRequest">
+        app:layout_constraintStart_toStartOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/textView30">
 
         <TextView
-            android:id="@+id/textView35"
+            android:id="@+id/textView31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hospital"
@@ -92,21 +77,22 @@
             android:text="@string/blood_group"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView35"
-            app:layout_constraintStart_toEndOf="@+id/textView35" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+            app:layout_constraintStart_toEndOf="@+id/textView31" />
 
         <TextView
+            android:id="@+id/textView32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="Units"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
-            app:layout_constraintEnd_toStartOf="@+id/textView34" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView33"
+            app:layout_constraintEnd_toStartOf="@+id/textView33" />
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/textView33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Status"
@@ -114,17 +100,17 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSentRequest"
+        android:id="@+id/rvIncomingRequest"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sentRequestConstraint"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/incomingRequestConstraint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
