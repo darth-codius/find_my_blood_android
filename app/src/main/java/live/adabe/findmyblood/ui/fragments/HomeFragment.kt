@@ -19,9 +19,6 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        binding.btnmakerequest.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_requestScreenFragment)
-        }
         return binding.root
     }
 }
