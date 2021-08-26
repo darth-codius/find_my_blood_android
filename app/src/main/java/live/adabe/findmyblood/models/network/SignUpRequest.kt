@@ -6,4 +6,3 @@ data class SignUpRequest(
     val password: String,
     val confirmPassword: String
 )
-//ame, email, password and confirmPassword

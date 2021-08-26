@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".ui.fragments.LoginFragment">
 
 
@@ -51,8 +52,6 @@
         android:id="@+id/login_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:background="@drawable/button_lite_bg"
         android:text="login"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,9 +64,7 @@
         android:id="@+id/registerButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
         android:text="Register"

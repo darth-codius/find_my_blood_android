@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
 
         viewModel.isLoginSuccessful.observe(viewLifecycleOwner, { isSuccessful ->
             if (isSuccessful) {
-
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
             } else {
                 makeToast("Login failed! \nPlease try again")
             }

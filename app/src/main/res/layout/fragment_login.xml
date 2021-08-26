@@ -5,94 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_blood_donation"
+    android:padding="10dp"
     tools:context=".ui.fragments.LoginFragment">
 
     <ImageView
         android:id="@+id/bloodLogo"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="50dp"
-        android:contentDescription="image"
-        android:src="@drawable/ic_blood"
-        app:layout_constraintEnd_toEndOf="@+id/getBlood"
-        app:layout_constraintStart_toStartOf="@+id/getBlood"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/getBlood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="GET BLOOD"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:contentDescription="image"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloodLogo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:text="Welcome!"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/getBlood" />
+        app:layout_constraintStart_toStartOf="@+id/bloodLogo"
+        app:layout_constraintTop_toBottomOf="@id/bloodLogo" />
 
     <TextView
         android:id="@+id/tvSignInToContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:text="Sign in to continue"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvWelcome"
         app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLoginEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
         android:hint="Email"
         app:boxStrokeColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvSignInToContinue"
         app:layout_constraintTop_toBottomOf="@+id/tvSignInToContinue"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLoginPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
         android:hint="Password"
         android:inputType="textPassword"
         app:boxStrokeColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textInputLoginEmail"
         app:layout_constraintTop_toBottomOf="@+id/textInputLoginEmail"
         app:passwordToggleEnabled="true">
 
@@ -105,22 +86,19 @@
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:text="Forgot Password?"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textInputLoginPassword"
         app:layout_constraintTop_toBottomOf="@+id/textInputLoginPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginSubmitButton"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
         android:background="@drawable/round_button"
-        android:backgroundTint="#ED394A"
+        android:backgroundTint="@color/red"
         android:text="Login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
