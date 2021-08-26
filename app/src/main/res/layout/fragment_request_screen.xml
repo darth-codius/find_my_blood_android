@@ -4,200 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".ui.fragments.RequestScreenFragment">
 
 
     <ImageView
-        android:id="@+id/myblood_img"
-        android:layout_width="59dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_blood"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvGetblood"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GET BLOOD"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/myblood_img"
-        app:layout_constraintStart_toStartOf="@+id/myblood_img"
-        app:layout_constraintTop_toBottomOf="@+id/myblood_img" />
-
-    <TextView
-        android:id="@+id/tvBlood_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="Patient's Blood Group"
         android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tvGetblood"
-        app:layout_constraintTop_toBottomOf="@+id/tvGetblood" />
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Spinner
-        android:id="@+id/spinnerbtn"
+        android:id="@+id/spBloodGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/ic_rectangle_30"
-        android:entries="@array/Blood_Group_array"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvBlood_group"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="@+id/tvBlood_group"
-        app:layout_constraintTop_toBottomOf="@+id/tvBlood_group" />
-
-
-
-
-
-
-    <TextView
-        android:id="@+id/tvcity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="City"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/spinnerbtn"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerbtn" />
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:entries="@array/blood_group_array"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tv_city_Layout"
-        android:layout_width="0dp"
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/ic_rectangle_31"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvcity"
-        app:layout_constraintTop_toBottomOf="@+id/tvcity">
+        android:layout_marginTop="10dp"
+        android:hint="City"
+        app:boxStrokeColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/spBloodGroup"
+        app:layout_constraintTop_toBottomOf="@+id/spBloodGroup">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_rectangle_31"
-            android:hint="City"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20dp"
-            app:boxCornerRadiusTopStart="20dp" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tv_units"
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:text="Units"
         android:textColor="@color/black"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_city_Layout"
-        app:layout_constraintTop_toBottomOf="@+id/tv_city_Layout" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_rectangle_28"
-        app:layout_constraintStart_toStartOf="@+id/tv_units"
-        app:layout_constraintTop_toBottomOf="@+id/tv_units" />
-
-            <TextView
-                android:id="@+id/Decreament_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                app:layout_constraintEnd_toEndOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="@+id/imageView5"
-                app:layout_constraintVertical_bias="0.52" />
-
-    <ImageView
-        android:id="@+id/box2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_rectangle_28"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/tv_units" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/box2"
-                app:layout_constraintEnd_toEndOf="@+id/box2"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="@+id/box2" />
-
-
-    <ImageView
-        android:id="@+id/box3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_rectangle_28"
-        app:layout_constraintStart_toEndOf="@+id/box2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_units" />
-
-    <TextView
-        android:id="@+id/Increament_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/box3"
-        app:layout_constraintEnd_toEndOf="@+id/box3"
-        app:layout_constraintStart_toEndOf="@+id/box2"
-        app:layout_constraintTop_toTopOf="@+id/box3" />
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginSubmitButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/appCompatButton"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/round_button"
-        android:backgroundTint="#ED394A"
+        android:backgroundTint="@color/red"
         android:text="Search"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/box2"
-        app:layout_constraintEnd_toEndOf="@+id/tv_city_Layout"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/box3"
-        app:layout_constraintTop_toTopOf="@+id/box2"
-        app:layout_constraintVertical_bias="0.692" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <View
+        android:id="@+id/view7"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
+        android:background="#B9B6B6"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginSubmitButton" />
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
 
-
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/red"
+        android:text="Make a Request"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
