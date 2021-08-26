@@ -268,7 +268,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dashboardIncomingRequest">
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/tvBlood_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hospital"
@@ -278,29 +278,29 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tvGetblood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="Blood Group"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toTopOf="@+id/textView10" />
+            app:layout_constraintStart_toEndOf="@+id/tvBlood_group"
+            app:layout_constraintTop_toTopOf="@+id/tvBlood_group" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/tvcity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="Units"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView12" />
+            app:layout_constraintEnd_toStartOf="@+id/tv_units"
+            app:layout_constraintTop_toTopOf="@+id/tv_units" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/tv_units"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Status"
