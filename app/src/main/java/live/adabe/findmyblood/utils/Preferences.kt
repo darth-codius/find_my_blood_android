@@ -29,8 +29,16 @@ class Preferences(private val activity: Activity) {
         }
     }
 
+    fun setHospitalName(name: String){
+        with(sharedPref.edit()){
+            putString("name", name)
+            apply()
+        }
+    }
+
     fun getIsLoggedIn() = sharedPref.getBoolean("logged_in", false)
 
     fun getId() = sharedPref.getString("id", null)
     fun getToken() = sharedPref.getString("token", null)
+    fun getHospitalName() = sharedPref.getString("name", null)
 }

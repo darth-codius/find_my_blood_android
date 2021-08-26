@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import live.adabe.findmyblood.R
 
-
 class RequestScreenFragment : Fragment() {
 
     override fun onCreateView(

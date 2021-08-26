@@ -63,12 +63,12 @@
                 android:layout_marginTop="8dp"
                 android:text="Capacity"
                 android:textSize="16sp"
-                card_view:layout_constraintBottom_toTopOf="@+id/textView8"
+                card_view:layout_constraintBottom_toTopOf="@+id/bloodGroupBPositive"
                 card_view:layout_constraintStart_toStartOf="@+id/textView3"
                 card_view:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/bloodGroupBPositive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="30units"
@@ -78,7 +78,7 @@
                 card_view:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/bloodGroupANegative"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -93,9 +93,9 @@
                 android:layout_height="wrap_content"
                 android:text="O+"
                 android:textSize="16sp"
-                card_view:layout_constraintEnd_toEndOf="@+id/textView7"
-                card_view:layout_constraintStart_toStartOf="@+id/textView7"
-                card_view:layout_constraintTop_toBottomOf="@+id/textView7" />
+                card_view:layout_constraintEnd_toEndOf="@+id/bloodGroupANegative"
+                card_view:layout_constraintStart_toStartOf="@+id/bloodGroupANegative"
+                card_view:layout_constraintTop_toBottomOf="@+id/bloodGroupANegative" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
