@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/myblood_img"
         android:layout_width="59dp"
         android:layout_height="70dp"
         android:layout_marginStart="32dp"
@@ -20,67 +20,49 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tvGetblood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GET BLOOD"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="@+id/myblood_img"
+        app:layout_constraintStart_toStartOf="@+id/myblood_img"
+        app:layout_constraintTop_toBottomOf="@+id/myblood_img" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tvBlood_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Patient's Blood Group"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toStartOf="@+id/tvGetblood"
+        app:layout_constraintTop_toBottomOf="@+id/tvGetblood" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="0dp"
+    <Spinner
+        android:id="@+id/spinnerbtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
         android:layout_marginTop="8dp"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/ic_rectangle_30"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        android:entries="@array/Blood_Group_array"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvBlood_group"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="@+id/tvBlood_group"
+        app:layout_constraintTop_toBottomOf="@+id/tvBlood_group" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Select"
-            android:background="@drawable/ic_rectangle_30"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20dp"
-            app:boxCornerRadiusTopStart="20dp" />
 
-    </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
-                android:id="@+id/ic_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_select"
-                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
-                app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                app:layout_constraintHorizontal_bias="0.89"
-                app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-                app:layout_constraintTop_toTopOf="@+id/textInputLayout" />
+
+
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tvcity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -88,25 +70,26 @@
         android:text="City"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintStart_toStartOf="@+id/spinnerbtn"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerbtn" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/tv_city_Layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/ic_rectangle_31"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11">
+        app:layout_constraintStart_toStartOf="@+id/tvcity"
+        app:layout_constraintTop_toBottomOf="@+id/tvcity">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/ic_rectangle_31"
             android:hint="City"
             app:boxCornerRadiusBottomEnd="20dp"
@@ -116,15 +99,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tv_units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Units"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintStart_toStartOf="@+id/tv_city_Layout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_Layout" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -132,14 +115,14 @@
         android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_rectangle_28"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintStart_toStartOf="@+id/tv_units"
+        app:layout_constraintTop_toBottomOf="@+id/tv_units" />
 
             <TextView
-                android:id="@+id/add_Unit"
+                android:id="@+id/Decreament_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
+                android:text="-"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -156,7 +139,7 @@
         android:src="@drawable/ic_rectangle_28"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_units" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -177,13 +160,13 @@
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_rectangle_28"
         app:layout_constraintStart_toEndOf="@+id/box2"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_units" />
 
     <TextView
-        android:id="@+id/Subtract_Unit"
+        android:id="@+id/Increament_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-"
+        android:text="+"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/box3"
@@ -191,17 +174,30 @@
         app:layout_constraintStart_toEndOf="@+id/box2"
         app:layout_constraintTop_toTopOf="@+id/box3" />
 
-    <Button
-        android:id="@+id/btnSearch"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginSubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/red"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ED394A"
         android:text="Search"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/box2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_city_Layout"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/box3"
+        app:layout_constraintTop_toTopOf="@+id/box2"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.57"
-        app:layout_constraintStart_toEndOf="@+id/Subtract_Unit"
-        app:layout_constraintTop_toTopOf="@+id/box2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginSubmitButton" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

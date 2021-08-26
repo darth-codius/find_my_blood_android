@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -17,7 +19,9 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-
+        binding.btnmakerequest.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_requestScreenFragment)
+        }
         return binding.root
     }
 }
