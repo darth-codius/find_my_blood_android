@@ -14,6 +14,7 @@ class AuthRepository(private val preferences: Preferences) {
             try {
                 val response = RetrofitProvider.authApi.loginHospital(loginRequest)
                 preferences.saveToken(response.token)
+                preferences.setHospitalName(response.data.name)
                 preferences.setIsLoggedIn(true)
                 true
             } catch (t: Throwable) {

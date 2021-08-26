@@ -27,7 +27,7 @@ class SignUpFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        factory = ViewModelFactory(requireActivity())
+        factory = ViewModelFactory(requireActivity(), 1)
         viewModel = ViewModelProvider(requireActivity(), factory)[AuthViewModel::class.java]
 
         binding.apply {

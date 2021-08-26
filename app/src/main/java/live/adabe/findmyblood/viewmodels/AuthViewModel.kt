@@ -14,7 +14,7 @@ import live.adabe.findmyblood.network.AuthRepository
 import live.adabe.findmyblood.network.RetrofitProvider
 import live.adabe.findmyblood.utils.Preferences
 
-class AuthViewModel(@SuppressLint("StaticFieldLeak") private val activity: Activity) : ViewModel() {
+class AuthViewModel(activity: Activity) : ViewModel() {
     private var preferences: Preferences = Preferences(activity)
     private var authRepository: AuthRepository = AuthRepository(preferences)
 

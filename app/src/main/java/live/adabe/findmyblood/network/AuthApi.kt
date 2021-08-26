@@ -9,13 +9,13 @@ import retrofit2.http.Path
 
 interface AuthApi {
 
-    @POST("hospital/signup")
+    @POST("signup")
     suspend fun signUpHospital(@Body signUpRequest: SignUpRequest): SignupResponse
 
-    @POST("hospital/login")
+    @POST("login")
     suspend fun loginHospital(@Body loginRequest: LoginRequest): LoginResponse
 
-    @POST("hospital/edit/:id")
+    @POST("edit/:id")
     suspend fun updateHospital(
         @Path("id") id: String,
         @Header("Authorization") token: String,
