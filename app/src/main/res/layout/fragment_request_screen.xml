@@ -56,7 +56,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tvUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -67,25 +67,47 @@
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/elegantNumberButton_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        app:backGroundColor="@color/white"
+        app:finalNumber="20"
+        app:initialNumber="1"
+        app:layout_constraintEnd_toStartOf="@id/appCompatButton"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_StartOf="@+id/tvUnit"
+        app:layout_constraintStart_toStartOf="@+id/tvUnit"
+        app:layout_constraintTop_toBottomOf="@+id/tvUnit"
+        app:textColor="@color/black"
+        app:textSize="8dp">
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
-        android:layout_width="200dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
         android:text="Search"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/elegantNumberButton_quantity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUnit" />
 
     <View
         android:id="@+id/view7"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="16dp"
         android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/tvUnit"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
 
     <androidx.recyclerview.widget.RecyclerView
