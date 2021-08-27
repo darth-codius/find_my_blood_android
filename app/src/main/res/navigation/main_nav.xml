@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/landingFragment"
         android:name="live.adabe.findmyblood.ui.fragments.LandingFragment"
-        android:label="fragment_landing"
-        tools:layout="@layout/fragment_landing" >
+        android:label="Boarding"
+        tools:layout="@layout/fragment_landing">
         <action
             android:id="@+id/action_landingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -23,8 +23,8 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="live.adabe.findmyblood.ui.fragments.SignUpFragment"
-        android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -32,8 +32,8 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="live.adabe.findmyblood.ui.fragments.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
@@ -46,8 +46,8 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="live.adabe.findmyblood.ui.fragments.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_requestScreenFragment"
             app:destination="@id/requestScreenFragment" />
@@ -58,26 +58,26 @@
     <fragment
         android:id="@+id/requestScreenFragment"
         android:name="live.adabe.findmyblood.ui.fragments.RequestScreenFragment"
-        android:label="fragment_request_screen"
+        android:label="Request"
         tools:layout="@layout/fragment_request_screen" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="live.adabe.findmyblood.ui.fragments.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/dashboardScreenFragment"
         android:name="live.adabe.findmyblood.ui.fragments.DashboardScreenFragment"
-        android:label="fragment_dashboard_screen"
+        android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard_screen" />
     <fragment
         android:id="@+id/incomingRequestFragment"
         android:name="live.adabe.findmyblood.ui.fragments.IncomingRequestFragment"
-        android:label="fragment_incoming_request"
+        android:label="Incoming Request"
         tools:layout="@layout/fragment_incoming_request" />
     <fragment
         android:id="@+id/sentRequestFragment"
         android:name="live.adabe.findmyblood.ui.fragments.SentRequestFragment"
-        android:label="fragment_sent_request"
+        android:label="Sent Request"
         tools:layout="@layout/fragment_sent_request" />
 </navigation>

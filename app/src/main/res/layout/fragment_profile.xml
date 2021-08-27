@@ -7,32 +7,22 @@
     android:padding="10dp"
     tools:context=".ui.fragments.ProfileFragment">
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imageHolder"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImageHolder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardCornerRadius="250dp"
+        android:background="@drawable/image_circle"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloodLogo">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/image_circle"
-            tools:src="@tools:sample/avatars" />
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@id/bloodLogo" />
 
     <ImageView
         android:id="@+id/bloodLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:contentDescription="image"
         android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +47,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/bloodLogo"
-        app:layout_constraintTop_toBottomOf="@+id/imageHolder" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImageHolder" />
 
     <EditText
         android:id="@+id/profileNameInput"
@@ -236,7 +226,7 @@
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="CAPACITY"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -248,6 +238,7 @@
         android:id="@+id/profileFirstConstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_style"
         android:backgroundTint="#F37B86"
         android:padding="10dp"
@@ -329,20 +320,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.23" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="30dp"
         android:text="A+"
         android:textColor="@color/black"
         android:textSize="12dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileFirstConstraint" />
 
     <TextView
@@ -361,14 +350,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.47931874" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7323601" />
+        app:layout_constraintGuide_percent="0.74" />
 
     <TextView
         android:id="@+id/textView23"
@@ -386,12 +375,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:text="B-"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline32" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -479,14 +466,12 @@
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="30dp"
         android:text="AB+"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileSecondConstraint" />
 
     <TextView
@@ -516,12 +501,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:text="O-"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView53"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline32" />
 
     <ImageView
