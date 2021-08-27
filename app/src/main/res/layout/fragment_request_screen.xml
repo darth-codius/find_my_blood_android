@@ -52,6 +52,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -70,7 +71,6 @@
         android:id="@+id/appCompatButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
         android:text="Search"
@@ -83,7 +83,7 @@
         android:id="@+id/view7"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#B9B6B6"
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
@@ -97,7 +97,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view7" />
+        app:layout_constraintTop_toBottomOf="@+id/view7"
+        tools:listitem="@layout/request_screen_item" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton2"

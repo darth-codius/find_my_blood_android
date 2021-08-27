@@ -148,6 +148,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
+        android:textAllCaps="false"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?selectableItemBackground"
