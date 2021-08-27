@@ -51,10 +51,33 @@
         <action
             android:id="@+id/action_homeFragment_to_requestScreenFragment"
             app:destination="@id/requestScreenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/requestScreenFragment"
         android:name="live.adabe.findmyblood.ui.fragments.RequestScreenFragment"
         android:label="fragment_request_screen"
         tools:layout="@layout/fragment_request_screen" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="live.adabe.findmyblood.ui.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/dashboardScreenFragment"
+        android:name="live.adabe.findmyblood.ui.fragments.DashboardScreenFragment"
+        android:label="fragment_dashboard_screen"
+        tools:layout="@layout/fragment_dashboard_screen" />
+    <fragment
+        android:id="@+id/incomingRequestFragment"
+        android:name="live.adabe.findmyblood.ui.fragments.IncomingRequestFragment"
+        android:label="fragment_incoming_request"
+        tools:layout="@layout/fragment_incoming_request" />
+    <fragment
+        android:id="@+id/sentRequestFragment"
+        android:name="live.adabe.findmyblood.ui.fragments.SentRequestFragment"
+        android:label="fragment_sent_request"
+        tools:layout="@layout/fragment_sent_request" />
 </navigation>
