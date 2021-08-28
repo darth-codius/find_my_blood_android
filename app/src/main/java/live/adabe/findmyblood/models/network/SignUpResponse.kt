@@ -1,6 +1,6 @@
 package live.adabe.findmyblood.models.network
 
-data class SignupResponse(
+data class SignUpResponse(
     val data: Data,
     val message: String,
     val status: String

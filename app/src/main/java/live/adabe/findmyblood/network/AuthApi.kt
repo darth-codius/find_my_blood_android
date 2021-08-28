@@ -1,6 +1,5 @@
 package live.adabe.findmyblood.network
 
-import live.adabe.findmyblood.models.Hospital
 import live.adabe.findmyblood.models.network.*
 import retrofit2.http.Body
 import retrofit2.http.Header
@@ -10,7 +9,7 @@ import retrofit2.http.Path
 interface AuthApi {
 
     @POST("signup")
-    suspend fun signUpHospital(@Body signUpRequest: SignUpRequest): SignupResponse
+    suspend fun signUpHospital(@Body signUpRequest: SignUpRequest): SignUpResponse
 
     @POST("login")
     suspend fun loginHospital(@Body loginRequest: LoginRequest): LoginResponse
@@ -20,5 +19,5 @@ interface AuthApi {
         @Path("id") id: String,
         @Header("Authorization") token: String,
         @Body updateRequest: UpdateRequest
-    )
+    ): UpdateResponse
 }

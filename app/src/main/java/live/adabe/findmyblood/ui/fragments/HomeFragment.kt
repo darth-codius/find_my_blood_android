@@ -52,6 +52,9 @@ class HomeFragment : Fragment() {
                     }
                 }
             })
+            ivLogo.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+            }
         }
     }
 }
