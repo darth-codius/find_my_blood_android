@@ -4,13 +4,12 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentProfileBinding
 import live.adabe.findmyblood.models.network.BloodRequest
 import live.adabe.findmyblood.models.network.UpdateRequest
@@ -46,6 +45,7 @@ class ProfileFragment : Fragment() {
             requireActivity(),
             ViewModelFactory(requireActivity(), 2)
         )[MainViewModel::class.java]
+
         initViews()
         return binding.root
     }
@@ -60,7 +60,6 @@ class ProfileFragment : Fragment() {
         }
     }
 
-
     private fun enableBloodInput() {
         binding.run {
             profileBloodAPositive.isEnabled = isBloodEditing
@@ -69,7 +68,7 @@ class ProfileFragment : Fragment() {
             profileBloodBNegative.isEnabled = isBloodEditing
             profileBloodAbPositive.isEnabled = isBloodEditing
             profileBloodAbNegative.isEnabled = isBloodEditing
-            profileBloodOpositive.isEnabled = isBloodEditing
+            profileBloodOPositive.isEnabled = isBloodEditing
             profileBloodONegative.isEnabled = isBloodEditing
         }
     }
@@ -141,7 +140,7 @@ class ProfileFragment : Fragment() {
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "O+",
-                        profileBloodOpositive.text.toString().toInt()
+                        profileBloodOPositive.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(

@@ -22,7 +22,6 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:scaleType="fitCenter"
         android:background="@drawable/image_circle"
         android:src="@drawable/ic_blood_logo"
         app:layout_constraintEnd_toEndOf="parent"
