@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(
-            navController,
-            binding.drawerLayout
-        )
-    }
+//    override fun onSupportNavigateUp(): Boolean {
+//        return NavigationUI.navigateUp(
+//            navController,
+//            binding.drawerLayout
+//        )
+//    }
 }

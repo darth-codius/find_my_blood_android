@@ -1,529 +1,565 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     tools:context=".ui.fragments.ProfileFragment">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileImageHolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/image_circle"
-        android:src="@drawable/ic_blood_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bloodLogo" />
-
-    <ImageView
-        android:id="@+id/bloodLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="image"
-        android:src="@drawable/ic_blood_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView36"
-        app:layout_constraintTop_toBottomOf="@+id/profileNameInput" />
-
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Name:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/bloodLogo"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageHolder" />
-
-    <EditText
-        android:id="@+id/profileNameInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:background="@null"
-        android:enabled="false"
-        android:text="Okwe General Hospital, Asaba"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toTopOf="@+id/textView36" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView38"
-        app:layout_constraintTop_toBottomOf="@+id/profileMottoInput" />
-
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Motto:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <EditText
-        android:id="@+id/profileMottoInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:enabled="false"
-        android:text="We save Lives Because We Care \nAnd They Matter To Us"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/profileNameInput"
-        app:layout_constraintStart_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toTopOf="@+id/textView38" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView40"
-        app:layout_constraintTop_toBottomOf="@+id/profileAddressInput" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Address:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
-
-    <EditText
-        android:id="@+id/profileAddressInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:enabled="false"
-        android:text="144 Mariam Babaginda Road"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/profileMottoInput"
-        app:layout_constraintStart_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toTopOf="@+id/textView40" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView42"
-        app:layout_constraintTop_toBottomOf="@+id/profileEmailInput" />
-
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Email:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
-
-    <EditText
-        android:id="@+id/profileEmailInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:enabled="false"
-        android:text="Okwegeneralhospital@gmail.com"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/profileAddressInput"
-        app:layout_constraintStart_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toTopOf="@+id/textView42" />
-
-    <View
-        android:id="@+id/view6"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView44"
-        app:layout_constraintTop_toBottomOf="@+id/profilePhoneInput" />
-
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Phone No:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-    <EditText
-        android:id="@+id/profilePhoneInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:enabled="false"
-        android:text="+234 7041659382"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/profileEmailInput"
-        app:layout_constraintStart_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toTopOf="@+id/textView44" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toBottomOf="@+id/editPersonalDetailsButton" />
-
-    <ImageView
-        android:id="@+id/editPersonalDetailsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintEnd_toStartOf="@+id/savePersonalDetailsButton"
-        app:layout_constraintTop_toTopOf="@+id/savePersonalDetailsButton" />
-
-    <ImageView
-        android:id="@+id/savePersonalDetailsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/ic_save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view6" />
-
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="CAPACITY"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profileFirstConstraint"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_style"
-        android:backgroundTint="#F37B86"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="@+id/textView46"
-        app:layout_constraintTop_toBottomOf="@+id/textView46">
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
-        <TextView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageHolder"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/image_circle"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_blood_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bloodLogo" />
+
+        <ImageView
+            android:id="@+id/bloodLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline27"
+            android:contentDescription="image"
+            android:src="@drawable/ic_blood_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#B9B6B6"
+            app:layout_constraintStart_toStartOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/profileNameInput" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Name:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/bloodLogo"
+            app:layout_constraintTop_toBottomOf="@+id/profileImageHolder" />
+
+        <EditText
+            android:id="@+id/profileNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:enabled="false"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#B9B6B6"
+            app:layout_constraintStart_toStartOf="@+id/textView38"
+            app:layout_constraintTop_toBottomOf="@+id/profileMottoInput" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Motto:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <EditText
+            android:id="@+id/profileMottoInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileNameInput"
+            app:layout_constraintStart_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#B9B6B6"
+            app:layout_constraintStart_toStartOf="@+id/textView40"
+            app:layout_constraintTop_toBottomOf="@+id/profileAddressInput" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Address:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <EditText
+            android:id="@+id/profileAddressInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileMottoInput"
+            app:layout_constraintStart_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toTopOf="@+id/textView40" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#B9B6B6"
+            app:layout_constraintStart_toStartOf="@+id/textView42"
+            app:layout_constraintTop_toBottomOf="@+id/profileEmailInput" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <EditText
+            android:id="@+id/profileEmailInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileAddressInput"
+            app:layout_constraintStart_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#B9B6B6"
+            app:layout_constraintStart_toStartOf="@+id/textView44"
+            app:layout_constraintTop_toBottomOf="@+id/profilePhoneInput" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone No:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/view5"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <EditText
+            android:id="@+id/profilePhoneInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileEmailInput"
+            app:layout_constraintStart_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toTopOf="@+id/textView44" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/view6"
+            app:layout_constraintTop_toBottomOf="@+id/editPersonalDetailsButton" />
+
+        <ImageView
+            android:id="@+id/editPersonalDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@+id/savePersonalDetailsButton"
+            app:layout_constraintTop_toTopOf="@+id/savePersonalDetailsButton" />
+
+        <ImageView
+            android:id="@+id/savePersonalDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="CAPACITY"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileFirstConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_style"
+            android:backgroundTint="#F37B86"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="@+id/textView46"
+            app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+            <EditText
+                android:id="@+id/profileBloodAPositive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline27"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.22" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.76" />
+
+            <EditText
+                android:id="@+id/profileBloodANegative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline28"
+                app:layout_constraintStart_toStartOf="@+id/guideline27"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/profileBloodBPositive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline29"
+                app:layout_constraintStart_toStartOf="@+id/guideline28"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/profileBloodBNegative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline29"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline27"
+            android:id="@+id/guideline26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.22" />
+            app:layout_constraintGuide_percent="0.23" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:text="A+"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toBottomOf="@+id/profileFirstConstraint" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A-"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView21"
+            app:layout_constraintEnd_toStartOf="@+id/guideline31"
+            app:layout_constraintStart_toStartOf="@+id/guideline26" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline28"
+            android:id="@+id/guideline31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline29"
+            android:id="@+id/guideline32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.78" />
+            app:layout_constraintGuide_percent="0.74" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline28"
-            app:layout_constraintStart_toStartOf="@+id/guideline27"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="B+"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
+            app:layout_constraintEnd_toStartOf="@+id/guideline32"
+            app:layout_constraintStart_toStartOf="@+id/guideline31" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline29"
-            app:layout_constraintStart_toStartOf="@+id/guideline28"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginStart="40dp"
+            android:text="B-"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
+            app:layout_constraintStart_toStartOf="@+id/guideline32" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileSecondConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_style"
+            android:backgroundTint="#F37B86"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="@+id/profileFirstConstraint"
+            app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+            <EditText
+                android:id="@+id/profileBloodAbPositive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.21683674" />
+
+            <EditText
+                android:id="@+id/profileBloodAbNegative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline34"
+                app:layout_constraintStart_toStartOf="@+id/guideline33"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.76" />
+
+            <EditText
+                android:id="@+id/profileBloodOpositive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                app:layout_constraintStart_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/profileBloodONegative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline35"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/textView51"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:text="AB+"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline26"
+            app:layout_constraintTop_toBottomOf="@+id/profileSecondConstraint" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AB-"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView51"
+            app:layout_constraintEnd_toStartOf="@+id/guideline31"
+            app:layout_constraintStart_toStartOf="@+id/guideline26" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O+"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView52"
+            app:layout_constraintEnd_toStartOf="@+id/guideline32"
+            app:layout_constraintStart_toStartOf="@+id/guideline31" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="O-"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView53"
+            app:layout_constraintStart_toStartOf="@+id/guideline32" />
+
+        <ImageView
+            android:id="@+id/saveBloodImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_save"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline29"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+        <ImageView
+            android:id="@+id/editBloodImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@+id/saveBloodImage"
+            app:layout_constraintTop_toTopOf="@+id/saveBloodImage" />
+
+        <ImageView
+            android:id="@+id/upload_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImageHolder"
+            app:layout_constraintEnd_toEndOf="@+id/profileImageHolder" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.23" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
-        android:text="A+"
-        android:textColor="@color/black"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toBottomOf="@+id/profileFirstConstraint" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="A-"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView21"
-        app:layout_constraintEnd_toStartOf="@+id/guideline31"
-        app:layout_constraintStart_toStartOf="@+id/guideline26" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.74" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="B+"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
-        app:layout_constraintEnd_toStartOf="@+id/guideline32"
-        app:layout_constraintStart_toStartOf="@+id/guideline31" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="B-"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="@+id/guideline32" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profileSecondConstraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_style"
-        android:backgroundTint="#F37B86"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="@+id/profileFirstConstraint"
-        app:layout_constraintTop_toBottomOf="@+id/textView21">
-
-        <TextView
-            android:id="@+id/textView47"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline33"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.21683674" />
-
-        <TextView
-            android:id="@+id/textView48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline34"
-            app:layout_constraintStart_toStartOf="@+id/guideline33"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.78" />
-
-        <TextView
-            android:id="@+id/textView49"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline35"
-            app:layout_constraintStart_toStartOf="@+id/guideline34"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView50"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline35"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
-        android:text="AB+"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline26"
-        app:layout_constraintTop_toBottomOf="@+id/profileSecondConstraint" />
-
-    <TextView
-        android:id="@+id/textView52"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AB-"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView51"
-        app:layout_constraintEnd_toStartOf="@+id/guideline31"
-        app:layout_constraintStart_toStartOf="@+id/guideline26" />
-
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="O+"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView52"
-        app:layout_constraintEnd_toStartOf="@+id/guideline32"
-        app:layout_constraintStart_toStartOf="@+id/guideline31" />
-
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="O-"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView53"
-        app:layout_constraintStart_toStartOf="@+id/guideline32" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/ic_save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView54" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
