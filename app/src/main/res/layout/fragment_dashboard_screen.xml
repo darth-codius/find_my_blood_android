@@ -18,9 +18,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImageHolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/ic_blood_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -484,6 +483,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
+        android:textAllCaps="false"
         android:text="Make a Request"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,14 +1,11 @@
 package live.adabe.findmyblood
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.*
+import androidx.navigation.ui.NavigationUI
 import live.adabe.findmyblood.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,9 +29,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(
-            navController,
-            binding.drawerLayout
-        )
+        return NavigationUI.navigateUp(navController, binding.drawerLayout)
     }
 }
