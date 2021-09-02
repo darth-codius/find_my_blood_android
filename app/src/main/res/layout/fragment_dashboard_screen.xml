@@ -352,7 +352,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.56122446" />
+            app:layout_constraintGuide_percent="0.58" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline10"
@@ -424,7 +424,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.56122446" />
+            app:layout_constraintGuide_percent="0.58" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline14"
@@ -479,12 +479,13 @@
         app:layout_constraintTop_toBottomOf="@+id/sixthConstraint" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dashboardMakeRequestButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
-        android:textAllCaps="false"
         android:text="Make a Request"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentDashboardScreenBinding
 
@@ -18,6 +19,19 @@ class DashboardScreenFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentDashboardScreenBinding.inflate(inflater, container, false)
 
+        binding.apply {
+            sentRequestSeeMore.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardScreenFragment_to_sentRequestFragment)
+            }
+
+            incomingRequestSeeMore.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardScreenFragment_to_incomingRequestFragment)
+            }
+
+            dashboardMakeRequestButton.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardScreenFragment_to_requestScreenFragment)
+            }
+        }
 
         return binding.root
     }

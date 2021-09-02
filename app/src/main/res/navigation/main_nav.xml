@@ -69,7 +69,17 @@
         android:id="@+id/dashboardScreenFragment"
         android:name="live.adabe.findmyblood.ui.fragments.DashboardScreenFragment"
         android:label="Dashboard"
-        tools:layout="@layout/fragment_dashboard_screen" />
+        tools:layout="@layout/fragment_dashboard_screen" >
+        <action
+            android:id="@+id/action_dashboardScreenFragment_to_incomingRequestFragment"
+            app:destination="@id/incomingRequestFragment" />
+        <action
+            android:id="@+id/action_dashboardScreenFragment_to_sentRequestFragment"
+            app:destination="@id/sentRequestFragment" />
+        <action
+            android:id="@+id/action_dashboardScreenFragment_to_requestScreenFragment"
+            app:destination="@id/requestScreenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/incomingRequestFragment"
         android:name="live.adabe.findmyblood.ui.fragments.IncomingRequestFragment"

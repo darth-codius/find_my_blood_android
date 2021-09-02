@@ -9,6 +9,7 @@ import live.adabe.findmyblood.models.network.SignUpRequest
 import live.adabe.findmyblood.models.network.UpdateRequest
 import live.adabe.findmyblood.utils.Preferences
 import live.adabe.findmyblood.utils.Resource
+import okhttp3.MultipartBody
 
 class AuthRepository(private val preferences: Preferences) {
 
@@ -19,6 +20,7 @@ class AuthRepository(private val preferences: Preferences) {
                 preferences.saveToken(response.token)
                 preferences.setHospitalName(response.data.name)
                 preferences.setIsLoggedIn(true)
+                preferences.saveId(response.data._id)
                 true
             } catch (t: Throwable) {
                 Log.d("REPOSITORY", t.message.toString())
@@ -41,7 +43,7 @@ class AuthRepository(private val preferences: Preferences) {
         }
     }
 
-    suspend fun updateHospital(updateRequest: UpdateRequest): Resource<Hospital> {
+    suspend fun updateHospital(updateRequest: MultipartBody): Resource<Hospital> {
         return withContext(Dispatchers.IO) {
             try {
                 val response = RetrofitProvider.authApi.updateHospital(
