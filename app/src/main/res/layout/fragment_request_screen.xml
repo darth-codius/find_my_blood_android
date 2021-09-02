@@ -75,7 +75,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="@+id/unitsEntries" />
 
     <View
         android:id="@+id/view7"
@@ -111,5 +111,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/unitsEntries"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:background="@drawable/borders_input"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:layout_editor_absoluteY="288dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

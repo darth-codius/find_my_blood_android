@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import live.adabe.findmyblood.databinding.FragmentProfileBinding
 import live.adabe.findmyblood.models.network.BloodRequest
-import live.adabe.findmyblood.models.network.UpdateRequest
 import live.adabe.findmyblood.ui.fragments.ktx.InputStreamRequestBody
 import live.adabe.findmyblood.utils.Status
 import live.adabe.findmyblood.viewmodels.AuthViewModel
@@ -96,7 +95,7 @@ class ProfileFragment : Fragment() {
                 isEditing = false
                 enableDetailsInputs()
 
-                if( imageURI != null){
+                if (imageURI != null) {
                     val image = InputStreamRequestBody(
                         "multipart/form-data".toMediaTypeOrNull(),
                         requireActivity().contentResolver,
@@ -105,31 +104,31 @@ class ProfileFragment : Fragment() {
 
                     requestBodyBuilder.addFormDataPart("logo", "logo", image)
                     profileStateInput.text.let {
-                        if (it.isNotEmpty()){
+                        if (it.isNotEmpty()) {
                             requestBodyBuilder.addFormDataPart("state", it.toString())
                         }
                     }
 
-                    profileAddressInput.text.let{
-                        if (it.isNotEmpty()){
+                    profileAddressInput.text.let {
+                        if (it.isNotEmpty()) {
                             requestBodyBuilder.addFormDataPart("address", it.toString())
                         }
                     }
 
                     profileMotoInput.text.let {
-                        if (it.isNotEmpty()){
+                        if (it.isNotEmpty()) {
                             requestBodyBuilder.addFormDataPart("motto", it.toString())
                         }
                     }
 
                     profilePhoneInput.text.let {
-                        if (it.isNotEmpty()){
+                        if (it.isNotEmpty()) {
                             requestBodyBuilder.addFormDataPart("phoneNumber", it.toString())
                         }
                     }
                     val requestbody: MultipartBody = requestBodyBuilder.build()
                     viewModel.updateHospital(requestbody)
-                }else{
+                } else {
                     Toast.makeText(requireContext(), "Please add image!", Toast.LENGTH_LONG).show()
                 }
             }
@@ -220,7 +219,7 @@ class ProfileFragment : Fragment() {
                     .load(this)
                     .into(binding.profileImageHolder)
             }
-        }else Toast.makeText(requireContext(), "Failed to get image!", Toast.LENGTH_LONG ).show()
+        } else Toast.makeText(requireContext(), "Failed to get image!", Toast.LENGTH_LONG).show()
     }
 
 }

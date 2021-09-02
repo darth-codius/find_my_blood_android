@@ -12,8 +12,6 @@ import live.adabe.findmyblood.databinding.ActivityMainBinding
 import androidx.drawerlayout.widget.DrawerLayout
 
 
-
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            when(destination.id){
+            when (destination.id) {
                 R.id.landingFragment -> {
                     supportActionBar?.hide()
                 }
