@@ -6,7 +6,7 @@ import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import live.adabe.findmyblood.models.Blood
-import live.adabe.findmyblood.models.network.BloodRequest
+import live.adabe.findmyblood.models.network.blood.BloodRequest
 import live.adabe.findmyblood.network.BloodRepository
 import live.adabe.findmyblood.utils.Preferences
 

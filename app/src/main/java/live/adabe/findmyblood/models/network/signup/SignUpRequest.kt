@@ -1,4 +1,4 @@
-package live.adabe.findmyblood.models.network
+package live.adabe.findmyblood.models.network.signup
 
 data class SignUpRequest(
     val name: String,

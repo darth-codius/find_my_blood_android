@@ -1,4 +1,4 @@
-package live.adabe.findmyblood.models.network
+package live.adabe.findmyblood.models.network.login
 
 data class LoginRequest(
     val email: String,

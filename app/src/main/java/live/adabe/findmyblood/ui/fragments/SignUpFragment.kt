@@ -11,7 +11,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentSignUpBinding
-import live.adabe.findmyblood.models.network.SignUpRequest
+import live.adabe.findmyblood.models.network.signup.SignUpRequest
 import live.adabe.findmyblood.viewmodels.AuthViewModel
 import live.adabe.findmyblood.viewmodels.ViewModelFactory
 

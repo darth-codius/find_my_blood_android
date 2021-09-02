@@ -1,7 +1,10 @@
 package live.adabe.findmyblood.network
 
-import live.adabe.findmyblood.models.network.*
-import okhttp3.MultipartBody
+import live.adabe.findmyblood.models.network.login.LoginRequest
+import live.adabe.findmyblood.models.network.login.LoginResponse
+import live.adabe.findmyblood.models.network.signup.SignUpRequest
+import live.adabe.findmyblood.models.network.signup.SignUpResponse
+import live.adabe.findmyblood.models.network.update.UpdateResponse
 import okhttp3.RequestBody
 import retrofit2.http.Body
 import retrofit2.http.Header

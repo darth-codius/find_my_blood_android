@@ -1,4 +1,4 @@
-package live.adabe.findmyblood.models.network
+package live.adabe.findmyblood.models.network.blood
 
 import live.adabe.findmyblood.models.Blood
 

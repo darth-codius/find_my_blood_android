@@ -4,9 +4,8 @@ import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import live.adabe.findmyblood.models.network.Hospital
-import live.adabe.findmyblood.models.network.LoginRequest
-import live.adabe.findmyblood.models.network.SignUpRequest
-import live.adabe.findmyblood.models.network.UpdateRequest
+import live.adabe.findmyblood.models.network.login.LoginRequest
+import live.adabe.findmyblood.models.network.signup.SignUpRequest
 import live.adabe.findmyblood.utils.Preferences
 import live.adabe.findmyblood.utils.Resource
 import okhttp3.MultipartBody

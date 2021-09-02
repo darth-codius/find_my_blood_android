@@ -1,4 +1,4 @@
-package live.adabe.findmyblood.models.network
+package live.adabe.findmyblood.models.network.update
 
 data class UpdateRequest(
     val phoneNumber: String?,

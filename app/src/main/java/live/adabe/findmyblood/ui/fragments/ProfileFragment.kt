@@ -1,6 +1,5 @@
 package live.adabe.findmyblood.ui.fragments
 
-import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.net.Uri
@@ -12,8 +11,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentProfileBinding
-import live.adabe.findmyblood.models.network.BloodRequest
+import live.adabe.findmyblood.models.network.blood.BloodRequest
 import live.adabe.findmyblood.ui.fragments.ktx.InputStreamRequestBody
 import live.adabe.findmyblood.utils.Status
 import live.adabe.findmyblood.viewmodels.AuthViewModel
@@ -205,8 +205,6 @@ class ProfileFragment : Fragment() {
                 // Only the system receives the ACTION_OPEN_DOCUMENT, so no need to test.
                 startActivityForResult(intent, REQUEST_IMAGE_OPEN)
             }
-
-
         }
     }
 
@@ -218,6 +216,7 @@ class ProfileFragment : Fragment() {
                 Glide.with(requireContext())
                     .load(this)
                     .into(binding.profileImageHolder)
+                    .onLoadFailed(requireContext().getDrawable(R.drawable.account_image))
             }
         } else Toast.makeText(requireContext(), "Failed to get image!", Toast.LENGTH_LONG).show()
     }

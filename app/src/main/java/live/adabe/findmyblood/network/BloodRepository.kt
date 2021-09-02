@@ -3,7 +3,7 @@ package live.adabe.findmyblood.network
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import live.adabe.findmyblood.models.Blood
-import live.adabe.findmyblood.models.network.BloodRequest
+import live.adabe.findmyblood.models.network.blood.BloodRequest
 import live.adabe.findmyblood.utils.Preferences
 
 class BloodRepository(private val preferences: Preferences) {

@@ -1,7 +1,6 @@
 package live.adabe.findmyblood.ui.fragments
 
 import android.os.Bundle
-import android.os.Message
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentLoginBinding
-import live.adabe.findmyblood.models.network.LoginRequest
+import live.adabe.findmyblood.models.network.login.LoginRequest
 import live.adabe.findmyblood.viewmodels.AuthViewModel
 import live.adabe.findmyblood.viewmodels.ViewModelFactory
 
