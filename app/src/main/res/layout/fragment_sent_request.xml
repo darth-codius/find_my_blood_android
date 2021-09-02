@@ -12,31 +12,22 @@
         android:id="@+id/bloodLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:contentDescription="image"
         android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imageHolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImageHolder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        app:cardCornerRadius="250dp"
+        android:background="@drawable/image_circle"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloodLogo">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/image_circle"
-            tools:src="@tools:sample/avatars" />
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/bloodLogo" />
 
 
     <TextView
@@ -49,9 +40,9 @@
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageHolder"
-        app:layout_constraintStart_toStartOf="@+id/imageHolder"
-        app:layout_constraintTop_toBottomOf="@+id/imageHolder"
+        app:layout_constraintEnd_toEndOf="@+id/profileImageHolder"
+        app:layout_constraintStart_toStartOf="@+id/profileImageHolder"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageHolder"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -122,10 +113,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/sent_request_item"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sentRequestConstraint"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/sent_request_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

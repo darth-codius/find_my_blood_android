@@ -11,29 +11,20 @@
         android:id="@+id/bloodLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:contentDescription="image"
         android:src="@drawable/ic_blood_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imageHolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:cardCornerRadius="250dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImageHolder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_blood_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloodLogo">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            tools:src="@tools:sample/avatars" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/bloodLogo" />
 
     <TextView
         android:id="@+id/dashboardHospitalName"
@@ -44,9 +35,9 @@
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageHolder"
-        app:layout_constraintStart_toStartOf="@+id/imageHolder"
-        app:layout_constraintTop_toBottomOf="@+id/imageHolder" />
+        app:layout_constraintEnd_toEndOf="@+id/profileImageHolder"
+        app:layout_constraintStart_toStartOf="@+id/profileImageHolder"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageHolder" />
 
     <TextView
         android:id="@+id/dashboardSentRequest"
@@ -145,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="134dp" />
+            app:layout_constraintGuide_percent="0.34183672" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
@@ -170,7 +161,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="307dp" />
+            app:layout_constraintGuide_percent="0.81" />
 
         <ImageView
             android:id="@+id/statusGood"
@@ -218,14 +209,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="135dp" />
+            app:layout_constraintGuide_percent="0.34438777" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="217dp" />
+            app:layout_constraintGuide_percent="0.58" />
 
         <TextView
             android:id="@+id/textView6"
@@ -243,7 +234,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="307dp" />
+            app:layout_constraintGuide_percent="0.81" />
 
         <ImageView
             android:id="@+id/statusBad"
@@ -272,6 +263,7 @@
         android:id="@+id/dashboardIncomingRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Incoming Request"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -353,21 +345,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="134dp" />
+            app:layout_constraintGuide_percent="0.34183672" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="220dp" />
+            app:layout_constraintGuide_percent="0.56122446" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="307dp" />
+            app:layout_constraintGuide_percent="0.82" />
 
         <TextView
             android:id="@+id/textView13"
@@ -425,21 +417,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="136dp" />
+            app:layout_constraintGuide_percent="0.3469388" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="220dp" />
+            app:layout_constraintGuide_percent="0.56122446" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="306dp" />
+            app:layout_constraintGuide_percent="0.82" />
 
         <TextView
             android:id="@+id/textView18"
@@ -491,6 +483,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
+        android:textAllCaps="false"
         android:text="Make a Request"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
