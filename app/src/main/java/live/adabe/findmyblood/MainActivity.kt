@@ -1,12 +1,18 @@
 package live.adabe.findmyblood
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import live.adabe.findmyblood.databinding.ActivityMainBinding
+import androidx.drawerlayout.widget.DrawerLayout
+
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,6 +31,18 @@ class MainActivity : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(binding.navDrawer, navController)
         NavigationUI.setupActionBarWithNavController(this, navController, binding.drawerLayout)
+
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when(destination.id){
+                R.id.landingFragment -> {
+                    supportActionBar?.hide()
+                }
+                else -> {
+                    supportActionBar?.show()
+                }
+            }
+        }
 
     }
 

@@ -73,14 +73,14 @@
             android:layout_marginTop="10dp"
             android:background="#B9B6B6"
             app:layout_constraintStart_toStartOf="@+id/textView38"
-            app:layout_constraintTop_toBottomOf="@+id/profileMottoInput" />
+            app:layout_constraintTop_toBottomOf="@+id/profileStateInput" />
 
         <TextView
             android:id="@+id/textView38"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Motto:"
+            android:text="State:"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -88,7 +88,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <EditText
-            android:id="@+id/profileMottoInput"
+            android:id="@+id/profileStateInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -126,7 +126,7 @@
             android:background="@null"
             android:enabled="false"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/profileMottoInput"
+            app:layout_constraintEnd_toEndOf="@+id/profileStateInput"
             app:layout_constraintStart_toStartOf="@+id/guideline26"
             app:layout_constraintTop_toTopOf="@+id/textView40" />
 
@@ -137,14 +137,14 @@
             android:layout_marginTop="10dp"
             android:background="#B9B6B6"
             app:layout_constraintStart_toStartOf="@+id/textView42"
-            app:layout_constraintTop_toBottomOf="@+id/profileEmailInput" />
+            app:layout_constraintTop_toBottomOf="@+id/profileMotoInput" />
 
         <TextView
             android:id="@+id/textView42"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Email:"
+            android:text="Motto:"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -152,7 +152,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view4" />
 
         <EditText
-            android:id="@+id/profileEmailInput"
+            android:id="@+id/profileMotoInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -190,7 +190,7 @@
             android:background="@null"
             android:enabled="false"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/profileEmailInput"
+            app:layout_constraintEnd_toEndOf="@+id/profileMotoInput"
             app:layout_constraintStart_toStartOf="@+id/guideline26"
             app:layout_constraintTop_toTopOf="@+id/textView44" />
 

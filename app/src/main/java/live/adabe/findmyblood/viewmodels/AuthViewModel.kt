@@ -16,6 +16,7 @@ import live.adabe.findmyblood.network.AuthRepository
 import live.adabe.findmyblood.network.RetrofitProvider
 import live.adabe.findmyblood.utils.Preferences
 import live.adabe.findmyblood.utils.Resource
+import okhttp3.MultipartBody
 
 class AuthViewModel(activity: Activity) : ViewModel() {
     private var preferences: Preferences = Preferences(activity)
@@ -37,7 +38,7 @@ class AuthViewModel(activity: Activity) : ViewModel() {
         }
     }
 
-    fun updateHospital(updateRequest: UpdateRequest){
+    fun updateHospital(updateRequest: MultipartBody){
         viewModelScope.launch {
             updateResponseResource.postValue(Resource.loading(null))
             updateResponseResource.postValue(authRepository.updateHospital(updateRequest))
