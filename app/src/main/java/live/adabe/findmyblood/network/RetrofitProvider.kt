@@ -6,6 +6,7 @@ import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.util.concurrent.TimeUnit
 
 object RetrofitProvider {
@@ -16,11 +17,7 @@ object RetrofitProvider {
         .connectTimeout(5, TimeUnit.MINUTES)
         .writeTimeout(5, TimeUnit.MINUTES)
         .readTimeout(5, TimeUnit.MINUTES)
-        .addInterceptor(object : Interceptor {
-            override fun intercept(chain: Interceptor.Chain): Response {
-                return chain.proceed(chain.request().newBuilder().build())
-            }
-        })
+        .addInterceptor(Interceptor { chain -> chain.proceed(chain.request().newBuilder().build()) })
         .addInterceptor(logger)
         .build()
 
@@ -32,4 +29,5 @@ object RetrofitProvider {
 
     val authApi = instance.create(AuthApi::class.java)
     val bloodApi = instance.create(BloodApi::class.java)
+    val requestApi = instance.create(RequestApi::class.java)
 }
