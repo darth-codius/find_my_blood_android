@@ -6,7 +6,7 @@
     android:padding="10dp">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/item_logo"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -19,26 +19,30 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/item_hospital_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="Federal Medical Centre (FMC)"
+        android:layout_marginEnd="16dp"
+        tools:text="Federal Medical Centre (FMC)"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        card_view:layout_constraintStart_toEndOf="@+id/imageView4"
-        card_view:layout_constraintTop_toTopOf="@+id/imageView4" />
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toEndOf="@+id/item_logo"
+        card_view:layout_constraintTop_toTopOf="@+id/item_logo" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:id="@+id/item_address"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="168 Nnebisi Road Asaba, \nDelta State"
+        tools:text="168 Nnebisi Road Asaba, \nDelta State"
         android:textColor="@color/black"
         android:textSize="16sp"
-        card_view:layout_constraintStart_toStartOf="@+id/textView2"
-        card_view:layout_constraintTop_toBottomOf="@+id/textView2" />
+        card_view:layout_constraintEnd_toEndOf="@+id/item_hospital_name"
+        card_view:layout_constraintStart_toStartOf="@+id/item_hospital_name"
+        card_view:layout_constraintTop_toBottomOf="@+id/item_hospital_name" />
 
 
     <TextView
@@ -46,18 +50,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Capacity"
+        tools:text="Capacity"
         android:textColor="@color/black"
         android:textSize="14sp"
-        card_view:layout_constraintBottom_toTopOf="@+id/bloodGroupBPositive"
-        card_view:layout_constraintStart_toStartOf="@+id/textView3"
-        card_view:layout_constraintTop_toBottomOf="@+id/textView3" />
+        card_view:layout_constraintBottom_toTopOf="@+id/item_units"
+        card_view:layout_constraintStart_toStartOf="@+id/item_address"
+        card_view:layout_constraintTop_toBottomOf="@+id/item_address" />
 
     <TextView
-        android:id="@+id/bloodGroupBPositive"
+        android:id="@+id/item_units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="30units"
+        tools:text="30units"
         android:textColor="@color/black"
         android:textSize="14sp"
         card_view:layout_constraintStart_toStartOf="@+id/textView6"
@@ -67,16 +71,17 @@
         android:id="@+id/bloodGroupANegative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Blood Group:"
+        tools:text="Blood Group:"
         android:textColor="@color/black"
         android:textSize="14sp"
-        card_view:layout_constraintEnd_toEndOf="@+id/textView2"
+        card_view:layout_constraintEnd_toEndOf="@+id/item_hospital_name"
         card_view:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
+        android:id="@+id/item_blood_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="O+"
+        tools:text="O+"
         android:textColor="@color/black"
         android:textSize="14sp"
         card_view:layout_constraintEnd_toEndOf="@+id/bloodGroupANegative"

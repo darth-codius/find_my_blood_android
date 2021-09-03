@@ -23,6 +23,6 @@ interface BloodApi {
     @POST("blood/search")
     suspend fun searchBlood(
         @Header("Authorization") token: String,
-        searchRequest: SearchRequest
+        @Body searchRequest: SearchRequest
     ): SearchResponse
 }

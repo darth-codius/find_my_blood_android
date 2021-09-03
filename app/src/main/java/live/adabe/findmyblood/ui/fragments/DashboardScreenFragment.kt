@@ -25,10 +25,13 @@ class DashboardScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentDashboardScreenBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(requireActivity(), ViewModelFactory(requireActivity(), 2))[MainViewModel::class.java]
+        viewModel = ViewModelProvider(
+            requireActivity(),
+            ViewModelFactory(requireActivity(), 2)
+        )[MainViewModel::class.java]
         incomingAdapter = RequestAdapter(listOf())
         sentAdapter = RequestAdapter(listOf())
         binding.apply {
@@ -59,25 +62,29 @@ class DashboardScreenFragment : Fragment() {
         return binding.root
     }
 
-    private fun observeViewModel(){
+    private fun observeViewModel() {
         viewModel.run {
-            incomingRequestLiveData.observe(viewLifecycleOwner, {
-                if(it.isNotEmpty() && it.size >= 2){
-                    incomingAdapter.requests = it.subList(0, 2)
-                    binding.incomingRequestRv.adapter?.notifyDataSetChanged()
-                }else{
-                    incomingAdapter.requests = it
-                    binding.incomingRequestRv.adapter?.notifyDataSetChanged()
+            incomingRequestLiveData.observe(viewLifecycleOwner, { data ->
+                data?.let {
+                    if (it.isNotEmpty() && it.size >= 2) {
+                        incomingAdapter.requests = it.subList(0, 2)
+                        binding.incomingRequestRv.adapter?.notifyDataSetChanged()
+                    } else {
+                        incomingAdapter.requests = it
+                        binding.incomingRequestRv.adapter?.notifyDataSetChanged()
+                    }
                 }
 
             })
-            sentRequestsLiveData.observe(viewLifecycleOwner, {
-                if(it.isNotEmpty() && it.size >= 2){
-                    sentAdapter.requests = it.subList(0, 2)
-                    binding.sentRequestRv.adapter?.notifyDataSetChanged()
-                }else{
-                    sentAdapter.requests = it
-                    binding.sentRequestRv.adapter?.notifyDataSetChanged()
+            sentRequestsLiveData.observe(viewLifecycleOwner, { data ->
+                data?.let {
+                    if (it.isNotEmpty() && it.size >= 2) {
+                        sentAdapter.requests = it.subList(0, 2)
+                        binding.sentRequestRv.adapter?.notifyDataSetChanged()
+                    } else {
+                        sentAdapter.requests = it
+                        binding.sentRequestRv.adapter?.notifyDataSetChanged()
+                    }
                 }
             })
         }
