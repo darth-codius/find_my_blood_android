@@ -26,11 +26,12 @@ class RequestScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentRequestScreenBinding.inflate(inflater, container, false)
         bloodAdapter = BloodSearchAdapter(listOf()) {
-            Toast.makeText(requireContext(), "You Clicked $it", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "You Clicked ${it.hospital.name}", Toast.LENGTH_LONG)
+                .show()
         }
         viewModel = ViewModelProvider(
             requireActivity(),
