@@ -62,12 +62,23 @@ class DashboardScreenFragment : Fragment() {
     private fun observeViewModel(){
         viewModel.run {
             incomingRequestLiveData.observe(viewLifecycleOwner, {
-                incomingAdapter.requests = it.subList(0, 2)
-                binding.incomingRequestRv.adapter?.notifyDataSetChanged()
+                if(it.isNotEmpty() && it.size >= 2){
+                    incomingAdapter.requests = it.subList(0, 2)
+                    binding.incomingRequestRv.adapter?.notifyDataSetChanged()
+                }else{
+                    incomingAdapter.requests = it
+                    binding.incomingRequestRv.adapter?.notifyDataSetChanged()
+                }
+
             })
             sentRequestsLiveData.observe(viewLifecycleOwner, {
-                sentAdapter.requests = it.subList(0, 2)
-                binding.sentRequestRv.adapter?.notifyDataSetChanged()
+                if(it.isNotEmpty() && it.size >= 2){
+                    sentAdapter.requests = it.subList(0, 2)
+                    binding.sentRequestRv.adapter?.notifyDataSetChanged()
+                }else{
+                    sentAdapter.requests = it
+                    binding.sentRequestRv.adapter?.notifyDataSetChanged()
+                }
             })
         }
     }
