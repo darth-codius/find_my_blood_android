@@ -1,4 +1,4 @@
 package live.adabe.findmyblood.adapters
 
-class HospitalAdapter {
+class HospitalAdapter  {
 }
