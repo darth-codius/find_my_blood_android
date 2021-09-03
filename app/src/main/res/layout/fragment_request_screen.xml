@@ -29,21 +29,23 @@
 
     <Spinner
         android:id="@+id/spBloodGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:entries="@array/blood_group_array"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="City"
+        android:hint="Enter City"
         app:boxStrokeColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="@+id/spBloodGroup"
         app:layout_constraintTop_toBottomOf="@+id/spBloodGroup">
 
@@ -66,15 +68,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
-        android:layout_width="200dp"
+        android:id="@+id/search_blood_btn"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
+        android:paddingHorizontal="32dp"
         android:text="Search"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
         app:layout_constraintTop_toTopOf="@+id/etUnitEntries" />
 
     <View
@@ -84,7 +88,7 @@
         android:layout_marginTop="5dp"
         android:background="#B9B6B6"
         app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+        app:layout_constraintTop_toBottomOf="@+id/search_blood_btn" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRequestScreen"

@@ -61,45 +61,72 @@
 
         <TextView
             android:id="@+id/tvHospital"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Hospital"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvBloodGroup"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
             android:text="Blood Group"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tvHospital"
-            app:layout_constraintStart_toEndOf="@+id/tvHospital" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
             android:text="Units"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
-            app:layout_constraintEnd_toStartOf="@+id/textView15" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Status"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.83" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.31" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -136,45 +163,72 @@
 
         <TextView
             android:id="@+id/tvBlood_group"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Hospital"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvGetblood"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
             android:text="Blood Group"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tvBlood_group"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="@+id/tvBlood_group" />
 
         <TextView
             android:id="@+id/tvcity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
             android:text="Units"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/tv_units"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toTopOf="@+id/tv_units" />
 
         <TextView
             android:id="@+id/tv_units"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Status"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.83" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -208,19 +262,19 @@
         android:id="@+id/sent_request_rv"
         android:layout_width="0dp"
         android:layout_height="93dp"
-        tools:listitem="@layout/request_item"
         app:layout_constraintEnd_toEndOf="@+id/firstConstraintLayout"
         app:layout_constraintStart_toStartOf="@+id/firstConstraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/firstConstraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/firstConstraintLayout"
+        tools:listitem="@layout/request_item" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/incoming_request_rv"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:listitem="@layout/request_item"
         app:layout_constraintBottom_toTopOf="@+id/incomingRequestSeeMore"
         app:layout_constraintEnd_toEndOf="@+id/fourthConstraintLayout"
         app:layout_constraintStart_toStartOf="@+id/fourthConstraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/fourthConstraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/fourthConstraintLayout"
+        tools:listitem="@layout/request_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

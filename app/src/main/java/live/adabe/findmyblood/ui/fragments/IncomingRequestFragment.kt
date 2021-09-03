@@ -5,19 +5,41 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import live.adabe.findmyblood.R
+import live.adabe.findmyblood.adapters.RequestAdapter
 import live.adabe.findmyblood.databinding.FragmentIncomingRequestBinding
+import live.adabe.findmyblood.viewmodels.MainViewModel
+import live.adabe.findmyblood.viewmodels.ViewModelFactory
 
 class IncomingRequestFragment : Fragment() {
     private lateinit var binding: FragmentIncomingRequestBinding
+    private lateinit var requestAdapter: RequestAdapter
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentIncomingRequestBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(
+            requireActivity(),
+            ViewModelFactory(requireActivity(), 2)
+        )[MainViewModel::class.java]
+        requestAdapter = RequestAdapter(listOf())
+        binding.rvIncomingRequest.run {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = requestAdapter
+        }
 
+        viewModel.incomingRequestLiveData.observe(viewLifecycleOwner,{data->
+            data?.let {
+                requestAdapter.requests = it
+                requestAdapter.notifyDataSetChanged()
+            }
+        })
 
 
         return binding.root

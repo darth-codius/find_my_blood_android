@@ -7,8 +7,10 @@ import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import live.adabe.findmyblood.models.Blood
+import live.adabe.findmyblood.models.network.SearchRequest
 import live.adabe.findmyblood.models.network.blood.BloodRequest
 import live.adabe.findmyblood.models.network.request.Request
+import live.adabe.findmyblood.models.network.search.DataSearch
 import live.adabe.findmyblood.network.BloodRepository
 import live.adabe.findmyblood.utils.Preferences
 
@@ -16,12 +18,14 @@ class MainViewModel(activity: Activity) : ViewModel() {
     private val preferences = Preferences(activity)
     private val repository = BloodRepository(preferences)
 
+    val bloodSearchLiveData = MutableLiveData<List<DataSearch>>()
+
     val bloodLiveData = liveData<List<Blood>> {
         val data = repository.getAllBlood()
         emit(data)
     }
 
-    val incomingRequestLiveData  = liveData {
+    val incomingRequestLiveData = liveData {
         emit(repository.getIncomingRequests())
     }
 
@@ -29,12 +33,17 @@ class MainViewModel(activity: Activity) : ViewModel() {
         emit(repository.getSentRequests())
     }
 
-    fun addBlood(blood: BloodRequest){
+    fun addBlood(blood: BloodRequest) {
         viewModelScope.launch {
             repository.addBlood(blood)
         }
     }
 
+    fun searchBlood(searchRequest: SearchRequest) {
+        viewModelScope.launch {
+            bloodSearchLiveData.postValue(repository.searchBlood(searchRequest))
+        }
+    }
 
 
 }
