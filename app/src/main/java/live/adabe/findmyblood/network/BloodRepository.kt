@@ -1,10 +1,13 @@
 package live.adabe.findmyblood.network
 
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import live.adabe.findmyblood.models.Blood
 import live.adabe.findmyblood.models.network.SearchRequest
 import live.adabe.findmyblood.models.network.blood.BloodRequest
+import live.adabe.findmyblood.models.network.request.RecordsRequest
+import live.adabe.findmyblood.models.network.request.Request
 import live.adabe.findmyblood.models.network.search.DataSearch
 import live.adabe.findmyblood.utils.Preferences
 
@@ -56,8 +59,34 @@ class BloodRepository(private val preferences: Preferences) {
                     bloodRequest
                 )
                 (response.status == "success")
-            }catch (t: Throwable){
+            } catch (t: Throwable) {
                 false
+            }
+        }
+    }
+
+    suspend fun getIncomingRequests(): List<Request> {
+        return withContext(Dispatchers.IO) {
+            try {
+                RetrofitProvider.requestApi.getRecords(
+                    preferences.getToken()!!,
+                    RecordsRequest(preferences.getHospitalName()!!)
+                ).recievedRequest
+            } catch (t: Throwable) {
+                emptyList()
+            }
+        }
+    }
+
+    suspend fun getSentRequests(): List<Request> {
+        return withContext(Dispatchers.IO) {
+            try {
+                RetrofitProvider.requestApi.getRecords(
+                    preferences.getToken()!!,
+                    RecordsRequest(preferences.getHospitalName()!!)
+                ).sentRequest
+            } catch (t: Throwable) {
+                emptyList()
             }
         }
     }

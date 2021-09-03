@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import live.adabe.findmyblood.databinding.RequestItemBinding
 import live.adabe.findmyblood.models.network.request.Request
 
-class RequestAdapter(private var requests: List<Request>) :
+class RequestAdapter(var requests: List<Request>) :
     RecyclerView.Adapter<RequestAdapter.RequestViewHolder>() {
     inner class RequestViewHolder(private val binding: RequestItemBinding) :
         RecyclerView.ViewHolder(binding.root) {

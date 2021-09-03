@@ -3,6 +3,8 @@ package live.adabe.findmyblood.network
 import live.adabe.findmyblood.models.network.CreateRequestResponse
 import live.adabe.findmyblood.models.network.SearchRequest
 import live.adabe.findmyblood.models.network.blood.BloodRequest
+import live.adabe.findmyblood.models.network.request.RecordsRequest
+import live.adabe.findmyblood.models.network.request.RequestResponse
 import live.adabe.findmyblood.models.network.search.SearchResponse
 import retrofit2.http.Header
 import retrofit2.http.POST
@@ -13,8 +15,8 @@ interface RequestApi {
     @POST("request/all")
     suspend fun getRecords(
         @Header("Authorization") token: String,
-        searchRequest: SearchRequest
-    ): SearchResponse
+        recordsRequest: RecordsRequest
+    ): RequestResponse
 
     @POST("request/create/{id}")
     suspend fun createBloodRequest(
@@ -22,4 +24,6 @@ interface RequestApi {
         @Path("id") id: String,
         bloodRequest: BloodRequest
     ): CreateRequestResponse
+
+
 }
