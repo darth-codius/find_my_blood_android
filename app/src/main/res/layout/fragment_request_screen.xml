@@ -37,48 +37,19 @@
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Enter City"
-        app:boxStrokeColor="@color/red"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/spBloodGroup"
-        app:layout_constraintTop_toBottomOf="@+id/spBloodGroup">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Units"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/search_blood_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/red"
+        android:foreground="?selectableItemBackground"
         android:text="Search"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/etUnitEntries"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
-        app:layout_constraintTop_toTopOf="@+id/etUnitEntries" />
+        app:layout_constraintStart_toEndOf="@+id/spBloodGroup" />
 
     <View
         android:id="@+id/view7"
@@ -86,46 +57,36 @@
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
         android:background="#B9B6B6"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/search_blood_btn" />
+        app:layout_constraintStart_toStartOf="@+id/etUnitEntries"
+        app:layout_constraintTop_toBottomOf="@+id/etUnitEntries" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRequestScreen"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRequestScreenMakeRequest"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view7"
-        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/request_screen_item" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRequestScreenMakeRequest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button"
-        android:backgroundTint="@color/red"
-        android:text="Make a Request"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etUnitEntries"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/borders_input"
-        android:ems="10"
-        android:inputType="number"
-        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxStrokeColor="@color/red"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toStartOf="@+id/spBloodGroup"
+        app:layout_constraintTop_toBottomOf="@+id/spBloodGroup">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Units"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

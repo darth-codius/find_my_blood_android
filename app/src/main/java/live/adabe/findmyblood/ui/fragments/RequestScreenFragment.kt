@@ -35,8 +35,7 @@ class RequestScreenFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentRequestScreenBinding.inflate(inflater, container, false)
         bloodAdapter = BloodSearchAdapter(listOf()) {
-            makeBloodRequest(it.id)
-            Toast.makeText(requireContext(),"clicked", Toast.LENGTH_SHORT).show()
+            makeBloodRequest(it.hospital.id)
         }
         viewModel = ViewModelProvider(
             requireActivity(),
@@ -66,8 +65,8 @@ class RequestScreenFragment : Fragment() {
 
             }
 
-            etUnitEntries.addTextChangedListener { s ->
-                units = s?.toString()?.toInt() ?: 0
+            etUnitEntries.editText?.addTextChangedListener { s ->
+                if (s?.isNotEmpty()!!) units = s.toString().toInt() ?: 0
             }
 
             searchBloodBtn.setOnClickListener {
@@ -90,8 +89,8 @@ class RequestScreenFragment : Fragment() {
                 bloodAdapter.data = it
                 bloodAdapter.notifyDataSetChanged()
             })
-            isRequestSuccessfulLiveData.observe(viewLifecycleOwner, {isSuccessful->
-                if (isSuccessful){
+            isRequestSuccessfulLiveData.observe(viewLifecycleOwner, { isSuccessful ->
+                if (isSuccessful) {
                     findNavController().navigate(R.id.action_requestScreenFragment_to_dashboardScreenFragment)
                     isRequestSuccessfulLiveData.postValue(!isSuccessful)
                 }
@@ -99,9 +98,8 @@ class RequestScreenFragment : Fragment() {
         }
     }
 
-    private fun makeBloodRequest(id: String){
-        Log.d("OKRE", "$bloodGroup, $units")
-        if(bloodGroup.isNotEmpty() && units > 0){
+    private fun makeBloodRequest(id: String) {
+        if (bloodGroup.isNotEmpty() && units > 0) {
             val request = BloodRequest(bloodGroup, units)
             viewModel.makeBloodRequest(request, id)
 

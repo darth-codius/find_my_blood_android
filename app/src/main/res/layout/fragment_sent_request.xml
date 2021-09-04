@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileImageHolder"
+        android:id="@+id/sentRequestImageHolder"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
@@ -40,9 +40,9 @@
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/profileImageHolder"
-        app:layout_constraintStart_toStartOf="@+id/profileImageHolder"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageHolder"
+        app:layout_constraintEnd_toEndOf="@+id/sentRequestImageHolder"
+        app:layout_constraintStart_toStartOf="@+id/sentRequestImageHolder"
+        app:layout_constraintTop_toBottomOf="@+id/sentRequestImageHolder"
         tools:ignore="MissingConstraints" />
 
     <TextView

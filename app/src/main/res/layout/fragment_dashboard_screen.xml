@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileImageHolder"
+        android:id="@+id/dashboardImageHolder"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_profile"
@@ -35,9 +35,9 @@
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/profileImageHolder"
-        app:layout_constraintStart_toStartOf="@+id/profileImageHolder"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageHolder" />
+        app:layout_constraintEnd_toEndOf="@+id/dashboardImageHolder"
+        app:layout_constraintStart_toStartOf="@+id/dashboardImageHolder"
+        app:layout_constraintTop_toBottomOf="@+id/dashboardImageHolder" />
 
     <TextView
         android:id="@+id/dashboardSentRequest"

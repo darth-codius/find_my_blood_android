@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
                     }
                 }
             })
-            viewModel.hospitalInfoLiveData.observe(viewLifecycleOwner, { hospital->
+            viewModel.hospitalInfoLiveData.observe(viewLifecycleOwner, { hospital ->
                 hospital?.let {
 
                 }
@@ -61,6 +61,10 @@ class HomeFragment : Fragment() {
             ivLogo.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
             }
+            Glide.with(requireActivity()).load(Preferences(requireActivity()).getImage())
+                .into(ivLogo)
+                .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
         }
+
     }
 }
