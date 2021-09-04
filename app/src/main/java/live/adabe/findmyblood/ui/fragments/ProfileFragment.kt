@@ -193,6 +193,9 @@ class ProfileFragment : Fragment() {
                         profileMotoInput.setText(hospitalResource.data?.motto.toString())
                         profileAddressInput.setText(hospitalResource.data?.address.toString())
                         profilePhoneInput.setText(hospitalResource.data?.phoneNumber.toString())
+                        Glide.with(this@ProfileFragment).load(hospitalResource.data?.logo)
+                            .into(profileImageHolder)
+                            .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
                     }
                 }
             })

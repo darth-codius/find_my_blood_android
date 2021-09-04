@@ -50,6 +50,7 @@ class AuthRepository(private val preferences: Preferences) {
                     preferences.getToken()!!,
                     updateRequest = updateRequest
                 )
+                preferences.saveImage(response.data.logo)
                 Resource.success(response.data)
             } catch (t: Throwable) {
                 Resource.error(null, t.message)

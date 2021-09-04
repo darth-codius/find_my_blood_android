@@ -15,6 +15,13 @@ class Preferences(private val activity: Activity) {
         }
     }
 
+    fun saveImage(url: String) {
+        with(sharedPref.edit()) {
+            putString("url", url)
+            apply()
+        }
+    }
+
     fun saveToken(token: String) {
         with(sharedPref.edit()) {
             putString("token", token)
@@ -29,8 +36,8 @@ class Preferences(private val activity: Activity) {
         }
     }
 
-    fun setHospitalName(name: String){
-        with(sharedPref.edit()){
+    fun setHospitalName(name: String) {
+        with(sharedPref.edit()) {
             putString("name", name)
             apply()
         }
@@ -41,4 +48,15 @@ class Preferences(private val activity: Activity) {
     fun getId() = sharedPref.getString("id", null)
     fun getToken() = sharedPref.getString("token", null)
     fun getHospitalName() = sharedPref.getString("name", null)
+    fun getImage() = sharedPref.getString("url", null)
+
+    fun clear() {
+        with(sharedPref.edit()) {
+            remove("id")
+            remove("token")
+            remove("name")
+            setIsLoggedIn(false)
+            apply()
+        }
+    }
 }

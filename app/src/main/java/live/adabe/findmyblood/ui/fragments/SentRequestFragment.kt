@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.adapters.RequestAdapter
 import live.adabe.findmyblood.databinding.FragmentSentRequestBinding
+import live.adabe.findmyblood.utils.Preferences
 import live.adabe.findmyblood.viewmodels.MainViewModel
 import live.adabe.findmyblood.viewmodels.ViewModelFactory
 
@@ -42,7 +44,11 @@ class SentRequestFragment : Fragment() {
                 requestAdapter.notifyDataSetChanged()
             }
         })
-
+        binding.apply {
+            Glide.with(requireActivity()).load(Preferences(requireActivity()).getImage())
+                .into(sentRequestImageHolder)
+                .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
+        }
 
 
         return binding.root

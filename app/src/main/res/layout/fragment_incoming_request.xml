@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileImage"
+        android:id="@+id/incomingRequestProfileImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_blood_logo"
@@ -35,9 +35,9 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/profileImage"
-        app:layout_constraintStart_toStartOf="@+id/profileImage"
-        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+        app:layout_constraintEnd_toEndOf="@+id/incomingRequestProfileImage"
+        app:layout_constraintStart_toStartOf="@+id/incomingRequestProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/incomingRequestProfileImage" />
 
     <TextView
         android:id="@+id/textView30"
