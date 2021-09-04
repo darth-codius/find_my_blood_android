@@ -1,5 +1,6 @@
 package live.adabe.findmyblood.network
 
+import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -71,8 +72,9 @@ class BloodRepository(private val preferences: Preferences) {
                 RetrofitProvider.requestApi.getRecords(
                     preferences.getToken()!!,
                     RecordsRequest(preferences.getHospitalName()!!)
-                ).recievedRequest
+                ).data.recievedRequest
             } catch (t: Throwable) {
+                Log.e("REPOS", t.localizedMessage.toString())
                 emptyList()
             }
         }
@@ -84,7 +86,7 @@ class BloodRepository(private val preferences: Preferences) {
                 RetrofitProvider.requestApi.getRecords(
                     preferences.getToken()!!,
                     RecordsRequest(preferences.getHospitalName()!!)
-                ).sentRequest
+                ).data.sentRequest
             } catch (t: Throwable) {
                 emptyList()
             }

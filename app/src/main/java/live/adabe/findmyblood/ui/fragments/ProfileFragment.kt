@@ -200,6 +200,20 @@ class ProfileFragment : Fragment() {
                 }
             })
 
+            mainViewModel.hospitalInfoLiveData.observe(viewLifecycleOwner, { hospital->
+                hospital?.let {
+                    binding.run {
+                        profileNameInput.setText(it.name)
+                        profileMotoInput.setText(it.motto)
+                        profileAddressInput.setText(it.address)
+                        profilePhoneInput.setText(it.phoneNumber)
+                        Glide.with(this@ProfileFragment).load(it.logo)
+                            .into(profileImageHolder)
+                            .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
+                    }
+                }
+            })
+
             uploadImage.setOnClickListener {
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
                     type = "image/*"
