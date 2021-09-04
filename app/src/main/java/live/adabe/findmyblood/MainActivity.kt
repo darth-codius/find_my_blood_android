@@ -2,6 +2,7 @@ package live.adabe.findmyblood
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -10,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import live.adabe.findmyblood.databinding.ActivityMainBinding
 import androidx.drawerlayout.widget.DrawerLayout
+import live.adabe.findmyblood.utils.Preferences
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(binding.navDrawer, navController)
         NavigationUI.setupActionBarWithNavController(this, navController, binding.drawerLayout)
+
+        val header = binding.navDrawer.getHeaderView(0)
+        val headerHospitalName = header.findViewById<TextView>(R.id.headerHospitalName)
+        headerHospitalName.text = Preferences(this).getHospitalName()
 
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
