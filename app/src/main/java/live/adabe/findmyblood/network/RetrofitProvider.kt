@@ -27,7 +27,7 @@ object RetrofitProvider {
             .client(okHttp)
             .addConverterFactory(GsonConverterFactory.create()).build()
 
-    val authApi = instance.create(AuthApi::class.java)
-    val bloodApi = instance.create(BloodApi::class.java)
-    val requestApi = instance.create(RequestApi::class.java)
+    val authApi: AuthApi = instance.create(AuthApi::class.java)
+    val bloodApi: BloodApi = instance.create(BloodApi::class.java)
+    val requestApi: RequestApi = instance.create(RequestApi::class.java)
 }

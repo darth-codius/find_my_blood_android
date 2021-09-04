@@ -56,4 +56,14 @@ class AuthRepository(private val preferences: Preferences) {
             }
         }
     }
+
+    suspend fun getHospitalInfo(): Hospital?{
+        return withContext(Dispatchers.IO){
+            try {
+                RetrofitProvider.authApi.getHospitalInfo(preferences.getId()!!, preferences.getToken()!!).data
+            }catch (t: Throwable){
+                null
+            }
+        }
+    }
 }

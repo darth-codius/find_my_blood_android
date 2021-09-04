@@ -59,7 +59,11 @@
         android:id="@+id/requestScreenFragment"
         android:name="live.adabe.findmyblood.ui.fragments.RequestScreenFragment"
         android:label="Request"
-        tools:layout="@layout/fragment_request_screen" />
+        tools:layout="@layout/fragment_request_screen" >
+        <action
+            android:id="@+id/action_requestScreenFragment_to_dashboardScreenFragment"
+            app:destination="@id/dashboardScreenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="live.adabe.findmyblood.ui.fragments.ProfileFragment"

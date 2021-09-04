@@ -11,14 +11,17 @@ import live.adabe.findmyblood.models.network.SearchRequest
 import live.adabe.findmyblood.models.network.blood.BloodRequest
 import live.adabe.findmyblood.models.network.request.Request
 import live.adabe.findmyblood.models.network.search.DataSearch
+import live.adabe.findmyblood.network.AuthRepository
 import live.adabe.findmyblood.network.BloodRepository
 import live.adabe.findmyblood.utils.Preferences
 
 class MainViewModel(activity: Activity) : ViewModel() {
     private val preferences = Preferences(activity)
     private val repository = BloodRepository(preferences)
+    private val authRepository = AuthRepository(preferences)
 
     val bloodSearchLiveData = MutableLiveData<List<DataSearch>>()
+    val isRequestSuccessfulLiveData = MutableLiveData<Boolean>(false)
 
     val bloodLiveData = liveData<List<Blood>> {
         val data = repository.getAllBlood()
@@ -33,6 +36,10 @@ class MainViewModel(activity: Activity) : ViewModel() {
         emit(repository.getSentRequests())
     }
 
+    val hospitalInfoLiveData = liveData {
+        emit(authRepository.getHospitalInfo())
+    }
+
     fun addBlood(blood: BloodRequest) {
         viewModelScope.launch {
             repository.addBlood(blood)
@@ -42,6 +49,12 @@ class MainViewModel(activity: Activity) : ViewModel() {
     fun searchBlood(searchRequest: SearchRequest) {
         viewModelScope.launch {
             bloodSearchLiveData.postValue(repository.searchBlood(searchRequest))
+        }
+    }
+
+    fun makeBloodRequest(bloodRequest: BloodRequest, id: String){
+        viewModelScope.launch{
+            isRequestSuccessfulLiveData.postValue(repository.makeBloodRequest(bloodRequest, id))
         }
     }
 
