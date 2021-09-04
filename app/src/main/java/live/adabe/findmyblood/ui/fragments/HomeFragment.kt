@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import live.adabe.findmyblood.R
 import live.adabe.findmyblood.databinding.FragmentHomeBinding
 import live.adabe.findmyblood.utils.Preferences
@@ -50,6 +51,11 @@ class HomeFragment : Fragment() {
                         "O+" -> bloodGroupOPositive.text = item.units.toString()
                         "O-" -> bloodGroupONegative.text = item.units.toString()
                     }
+                }
+            })
+            viewModel.hospitalInfoLiveData.observe(viewLifecycleOwner, { hospital->
+                hospital?.let {
+
                 }
             })
             ivLogo.setOnClickListener {

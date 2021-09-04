@@ -50,12 +50,12 @@ class BloodRepository(private val preferences: Preferences) {
         }
     }
 
-    suspend fun makeBloodRequest(bloodRequest: BloodRequest): Boolean {
+    suspend fun makeBloodRequest(bloodRequest: BloodRequest, id: String): Boolean {
         return withContext(Dispatchers.IO) {
             try {
                 val response = RetrofitProvider.requestApi.createBloodRequest(
                     preferences.getToken()!!,
-                    preferences.getId()!!,
+                    id,
                     bloodRequest
                 )
                 (response.status == "success")
