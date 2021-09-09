@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import live.adabe.findmyblood.R
+import live.adabe.findmyblood.adapters.IncomingAdapter
 import live.adabe.findmyblood.adapters.RequestAdapter
 import live.adabe.findmyblood.databinding.FragmentIncomingRequestBinding
 import live.adabe.findmyblood.utils.Preferences
@@ -17,7 +18,7 @@ import live.adabe.findmyblood.viewmodels.ViewModelFactory
 
 class IncomingRequestFragment : Fragment() {
     private lateinit var binding: FragmentIncomingRequestBinding
-    private lateinit var requestAdapter: RequestAdapter
+    private lateinit var requestAdapter: IncomingAdapter
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
@@ -30,7 +31,7 @@ class IncomingRequestFragment : Fragment() {
             requireActivity(),
             ViewModelFactory(requireActivity(), 2)
         )[MainViewModel::class.java]
-        requestAdapter = RequestAdapter(listOf())
+        requestAdapter = IncomingAdapter(listOf())
         binding.rvIncomingRequest.run {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = requestAdapter

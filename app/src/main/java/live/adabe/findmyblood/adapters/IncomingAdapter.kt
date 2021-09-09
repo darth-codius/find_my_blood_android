@@ -4,28 +4,29 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import live.adabe.findmyblood.databinding.RequestItemBinding
+import live.adabe.findmyblood.models.network.request.ReceivedRequest
 import live.adabe.findmyblood.models.network.request.Request
 
-class RequestAdapter(var requests: List<Request>) :
-    RecyclerView.Adapter<RequestAdapter.RequestViewHolder>() {
-    inner class RequestViewHolder(private val binding: RequestItemBinding) :
+class IncomingAdapter(var requests: List<ReceivedRequest>) :
+    RecyclerView.Adapter<IncomingAdapter.IncomingRequestViewHolder>() {
+    inner class IncomingRequestViewHolder(private val binding: RequestItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(request: Request) {
+        fun bind(request: ReceivedRequest) {
             binding.apply {
-                hospitalName.text = request.hospital.name ?: ""
+                hospitalName.text = request.requestingHospital
                 bloodGroup.text = request.blood
                 unit.text = request.requestedUnits.toString()
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RequestViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IncomingRequestViewHolder {
         val binding = RequestItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return RequestViewHolder(binding)
+        return IncomingRequestViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: RequestViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: IncomingRequestViewHolder, position: Int) {
         holder.bind(requests[position])
     }
 

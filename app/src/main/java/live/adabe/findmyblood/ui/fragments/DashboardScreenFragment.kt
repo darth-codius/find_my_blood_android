@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import live.adabe.findmyblood.R
+import live.adabe.findmyblood.adapters.IncomingAdapter
 import live.adabe.findmyblood.adapters.RequestAdapter
 import live.adabe.findmyblood.databinding.FragmentDashboardScreenBinding
 import live.adabe.findmyblood.utils.Preferences
@@ -21,7 +22,7 @@ import live.adabe.findmyblood.viewmodels.ViewModelFactory
 class DashboardScreenFragment : Fragment() {
     private lateinit var binding: FragmentDashboardScreenBinding
     private lateinit var viewModel: MainViewModel
-    private lateinit var incomingAdapter: RequestAdapter
+    private lateinit var incomingAdapter: IncomingAdapter
     private lateinit var sentAdapter: RequestAdapter
 
     override fun onCreateView(
@@ -34,7 +35,7 @@ class DashboardScreenFragment : Fragment() {
             requireActivity(),
             ViewModelFactory(requireActivity(), 2)
         )[MainViewModel::class.java]
-        incomingAdapter = RequestAdapter(listOf())
+        incomingAdapter = IncomingAdapter(listOf())
         sentAdapter = RequestAdapter(listOf())
         binding.apply {
             sentRequestSeeMore.setOnClickListener {

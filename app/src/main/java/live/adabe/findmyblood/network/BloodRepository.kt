@@ -7,6 +7,7 @@ import kotlinx.coroutines.withContext
 import live.adabe.findmyblood.models.Blood
 import live.adabe.findmyblood.models.network.SearchRequest
 import live.adabe.findmyblood.models.network.blood.BloodRequest
+import live.adabe.findmyblood.models.network.request.ReceivedRequest
 import live.adabe.findmyblood.models.network.request.RecordsRequest
 import live.adabe.findmyblood.models.network.request.Request
 import live.adabe.findmyblood.models.network.search.DataSearch
@@ -66,7 +67,7 @@ class BloodRepository(private val preferences: Preferences) {
         }
     }
 
-    suspend fun getIncomingRequests(): List<Request> {
+    suspend fun getIncomingRequests(): List<ReceivedRequest> {
         return withContext(Dispatchers.IO) {
             try {
                 RetrofitProvider.requestApi.getRecords(
