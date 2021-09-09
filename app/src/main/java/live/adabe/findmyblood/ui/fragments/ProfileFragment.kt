@@ -139,49 +139,49 @@ class ProfileFragment : Fragment() {
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "A+",
-                        profileBloodAPositive.text.toString().toInt()
+                        units = profileBloodAPositive.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "A-",
-                        profileBloodANegative.text.toString().toInt()
+                        units = profileBloodANegative.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "B+",
-                        profileBloodBPositive.text.toString().toInt()
+                        units = profileBloodBPositive.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "B-",
-                        profileBloodBNegative.text.toString().toInt()
+                        units = profileBloodBNegative.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "AB+",
-                        profileBloodAbPositive.text.toString().toInt()
+                        units = profileBloodAbPositive.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "AB-",
-                        profileBloodAbNegative.text.toString().toInt()
+                        units = profileBloodAbNegative.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "O+",
-                        profileBloodOPositive.text.toString().toInt()
+                        units = profileBloodOPositive.text.toString().toInt()
                     )
                 )
                 mainViewModel.addBlood(
                     BloodRequest(
                         bloodGroup = "O-",
-                        profileBloodONegative.text.toString().toInt()
+                        units = profileBloodONegative.text.toString().toInt()
                     )
                 )
             }

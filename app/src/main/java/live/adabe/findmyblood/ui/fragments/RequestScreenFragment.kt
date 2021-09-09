@@ -1,14 +1,12 @@
 package live.adabe.findmyblood.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,7 +33,7 @@ class RequestScreenFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentRequestScreenBinding.inflate(inflater, container, false)
         bloodAdapter = BloodSearchAdapter(listOf()) {
-            makeBloodRequest(it.hospital.id)
+            makeBloodRequest(it.hospital.id, it.id)
         }
         viewModel = ViewModelProvider(
             requireActivity(),
@@ -98,9 +96,9 @@ class RequestScreenFragment : Fragment() {
         }
     }
 
-    private fun makeBloodRequest(id: String) {
+    private fun makeBloodRequest(id: String, bloodId: String) {
         if (bloodGroup.isNotEmpty() && units > 0) {
-            val request = BloodRequest(bloodGroup, units)
+            val request = BloodRequest(bloodId, bloodGroup, units)
             viewModel.makeBloodRequest(request, id)
 
         }
