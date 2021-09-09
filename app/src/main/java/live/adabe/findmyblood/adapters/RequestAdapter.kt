@@ -13,7 +13,7 @@ class RequestAdapter(var requests: List<Request>) :
 
         fun bind(request: Request) {
             binding.apply {
-                hospitalName.text = request.hospital.name ?: ""
+                hospitalName.text = request.requestingHospital
                 bloodGroup.text = request.blood
                 unit.text = request.requestedUnits.toString()
             }
