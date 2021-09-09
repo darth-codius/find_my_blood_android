@@ -559,5 +559,14 @@
             app:layout_constraintBottom_toBottomOf="@+id/profileImageHolder"
             app:layout_constraintEnd_toEndOf="@+id/profileImageHolder" />
 
+        <ImageView
+            android:id="@+id/profile_open_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/bloodLogo"
+            app:layout_constraintEnd_toEndOf="@+id/profileFirstConstraint"
+            app:layout_constraintTop_toTopOf="@+id/bloodLogo"
+            app:srcCompat="@drawable/ic_drawer" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -64,6 +66,10 @@ class HomeFragment : Fragment() {
             Glide.with(requireActivity()).load(Preferences(requireActivity()).getImage())
                 .into(ivLogo)
                 .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
+            homeOpenNav.setOnClickListener {
+                val navDrawer: DrawerLayout = requireActivity().findViewById(R.id.drawerLayout)
+                navDrawer.openDrawer(GravityCompat.START)
+            }
         }
 
     }

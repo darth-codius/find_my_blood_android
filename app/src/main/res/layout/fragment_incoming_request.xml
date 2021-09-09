@@ -138,4 +138,13 @@
         app:layout_constraintTop_toBottomOf="@+id/incomingRequestConstraint"
         tools:listitem="@layout/incoming_request_item" />
 
+    <ImageView
+        android:id="@+id/incoming_open_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_drawer"
+        app:layout_constraintBottom_toBottomOf="@+id/incomingRequestBloodLogo"
+        app:layout_constraintEnd_toEndOf="@+id/rvIncomingRequest"
+        app:layout_constraintTop_toTopOf="@+id/incomingRequestBloodLogo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

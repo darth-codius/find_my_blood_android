@@ -1,12 +1,15 @@
 package live.adabe.findmyblood.ui.fragments
 
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.LinearLayout
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -61,6 +64,11 @@ class DashboardScreenFragment : Fragment() {
             Glide.with(requireActivity()).load(Preferences(requireActivity()).getImage())
                 .into(dashboardImageHolder)
                 .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
+
+            dashboardOpenNav.setOnClickListener {
+                val navDrawer: DrawerLayout = requireActivity().findViewById(R.id.drawerLayout)
+                navDrawer.openDrawer(GravityCompat.START)
+            }
         }
 
         observeViewModel()

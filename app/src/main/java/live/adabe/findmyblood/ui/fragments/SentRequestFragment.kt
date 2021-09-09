@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -48,6 +50,11 @@ class SentRequestFragment : Fragment() {
             Glide.with(requireActivity()).load(Preferences(requireActivity()).getImage())
                 .into(sentRequestImageHolder)
                 .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
+
+            sentOpenNav.setOnClickListener {
+                val navDrawer: DrawerLayout = requireActivity().findViewById(R.id.drawerLayout)
+                navDrawer.openDrawer(GravityCompat.START)
+            }
         }
 
 

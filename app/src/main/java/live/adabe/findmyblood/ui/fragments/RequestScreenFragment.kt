@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import androidx.core.view.GravityCompat
 import androidx.core.widget.addTextChangedListener
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -78,6 +80,10 @@ class RequestScreenFragment : Fragment() {
                 adapter = bloodAdapter
             }
 
+            requestOpenNav.setOnClickListener {
+                val navDrawer: DrawerLayout = requireActivity().findViewById(R.id.drawerLayout)
+                navDrawer.openDrawer(GravityCompat.START)
+            }
         }
     }
 
