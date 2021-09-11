@@ -60,6 +60,10 @@ class BloodRepository(private val preferences: Preferences) {
                     id,
                     bloodRequest
                 )
+                if(response.status == "success"){
+                    getIncomingRequests()
+                    getSentRequests()
+                }
                 (response.status == "success")
             } catch (t: Throwable) {
                 false

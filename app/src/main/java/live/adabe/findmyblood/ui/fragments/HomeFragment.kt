@@ -55,17 +55,15 @@ class HomeFragment : Fragment() {
                     }
                 }
             })
-            viewModel.hospitalInfoLiveData.observe(viewLifecycleOwner, { hospital ->
-                hospital?.let {
 
-                }
-            })
             ivLogo.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
             }
+
             Glide.with(requireActivity()).load(Preferences(requireActivity()).getImage())
                 .into(ivLogo)
                 .onLoadFailed(requireContext().getDrawable(R.drawable.ic_profile))
+
             homeOpenNav.setOnClickListener {
                 val navDrawer: DrawerLayout = requireActivity().findViewById(R.id.drawerLayout)
                 navDrawer.openDrawer(GravityCompat.START)

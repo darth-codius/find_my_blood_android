@@ -230,6 +230,7 @@ class ProfileFragment : Fragment() {
                 startActivityForResult(intent, REQUEST_IMAGE_OPEN)
             }
         }
+        initBlood()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -243,6 +244,25 @@ class ProfileFragment : Fragment() {
                     .onLoadFailed(requireContext().getDrawable(R.drawable.account_image))
             }
         } else Toast.makeText(requireContext(), "Failed to get image!", Toast.LENGTH_LONG).show()
+    }
+
+    private  fun initBlood(){
+        binding.run {
+            mainViewModel.bloodLiveData.observe(viewLifecycleOwner, { blood ->
+                for (item in blood) {
+                    when (item.bloodGroup) {
+                        "A+" -> profileBloodAPositive.setText(item.units.toString())
+                        "A-" -> profileBloodANegative.setText(item.units.toString())
+                        "B+" -> profileBloodBPositive.setText(item.units.toString())
+                        "B-" -> profileBloodBNegative.setText(item.units.toString())
+                        "AB+" -> profileBloodAbPositive.setText(item.units.toString())
+                        "AB-" -> profileBloodAbNegative.setText(item.units.toString())
+                        "O+" -> profileBloodOPositive.setText(item.units.toString())
+                        "O-" -> profileBloodONegative.setText(item.units.toString())
+                    }
+                }
+            })
+        }
     }
 
 }

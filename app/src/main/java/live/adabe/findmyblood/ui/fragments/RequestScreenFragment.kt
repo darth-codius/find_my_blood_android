@@ -106,7 +106,6 @@ class RequestScreenFragment : Fragment() {
         if (bloodGroup.isNotEmpty() && units > 0) {
             val request = BloodRequest(bloodId, bloodGroup, units)
             viewModel.makeBloodRequest(request, id)
-
         }
     }
 }
